@@ -1,10 +1,11 @@
-import { useState } from 'react'
+import Navbar from './components/Navbar/Navbar'
 
 function App() {
   return (
-    <div>
-      <h1>Foodex Redesign</h1>
-    </div>
+    <>
+      <Navbar />
+      <main className="min-h-[calc(100vh-4.5rem)]" />
+    </>
   )
 }
 
