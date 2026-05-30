@@ -1,10 +1,15 @@
 import Navbar from './components/Navbar/Navbar'
+import Hero from './components/Hero/Hero'
+import TrustStrip from './components/TrustStrip/TrustStrip'
 
 function App() {
   return (
     <>
       <Navbar />
-      <main className="min-h-[calc(100vh-4.5rem)]" />
+      <main className="overflow-x-clip">
+			<Hero />
+      <TrustStrip />
+		</main>
     </>
   )
 }

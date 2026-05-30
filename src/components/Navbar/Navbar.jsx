@@ -48,7 +48,7 @@ function Navbar() {
 				isScrolled ? 'glass-surface' : 'bg-transparent'
 			}`}
 		>
-			<nav className="mx-auto grid w-full max-w-7xl grid-cols-[auto_1fr_auto] items-center gap-3 px-4 py-3 sm:px-6 lg:px-8 lg:py-4">
+			<nav className="mx-auto grid w-full max-w-7xl grid-cols-[auto_1fr_auto] items-center gap-3 px-4 py-3 sm:px-6 lg:px-8 lg:py-3">
 				<a
 					href="#home"
 					className="flex items-center gap-3 rounded-full transition-transform duration-200 hover:-translate-y-0.5"
@@ -61,7 +61,7 @@ function Navbar() {
 					/>
 				</a>
 
-				<div className="hidden items-center justify-self-center gap-8 lg:flex">
+				<div className="hidden items-center justify-self-center gap-7 lg:flex">
 					{navItems.map((item) => (
 						<a key={item} href={`#${item.toLowerCase()}`} className="nav-link text-sm font-medium">
 							{item}

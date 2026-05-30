@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
 :root {
-	--color-bg-primary: #fff8f0;
+	--color-bg-primary: #FAF6F0;
 	--color-bg-secondary: #f5ebdd;
 	--color-card: rgba(255, 248, 240, 0.72);
 	--color-brand-red: #d90429;
@@ -48,10 +48,8 @@ body {
 	margin: 0;
 	min-width: 320px;
 	min-height: 100vh;
-	font-family: 'Sora', sans-serif;
-	background:
-		radial-gradient(circle at top, rgba(217, 4, 41, 0.06), transparent 36%),
-		var(--color-bg-primary);
+	font-family: 'Inter', sans-serif;
+	background: var(--color-bg-primary);
 	color: var(--color-text-primary);
 	transition:
 		background-color 220ms ease,
@@ -72,6 +70,14 @@ select {
 
 #root {
 	min-height: 100vh;
+}
+
+.font-display {
+	font-family: 'Manrope', sans-serif;
+}
+
+.font-body {
+	font-family: 'Inter', sans-serif;
 }
 
 .glass-surface {
