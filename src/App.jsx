@@ -2,6 +2,7 @@ import Navbar from './components/Navbar/Navbar'
 import Hero from './components/Hero/Hero'
 import TrustStrip from './components/TrustStrip/TrustStrip'
 import FeaturedCategories from './components/FeaturedCategories/FeaturedCategories'
+import BestSellers from './components/BestSellers/BestSellers'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
 			<Hero />
       <TrustStrip />
       <FeaturedCategories />
+			<BestSellers />
 		</main>
     </>
   )

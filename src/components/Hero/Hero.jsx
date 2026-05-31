@@ -1,7 +1,7 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 
-import heroProduct from '../../assets/products/navrattan-mix.png'
+import heroProduct from '../../assets/products/teekha-mix-front.png'
 
 function Hero() {
 	const productShellRef = useRef(null)
@@ -31,8 +31,8 @@ function Hero() {
 
 	return (
 		<section className="relative overflow-hidden bg-(--color-bg-primary) lg:min-h-[calc(100vh-72px)]">
-			<div className="mx-auto grid min-h-full max-w-7xl items-center gap-10 px-4 py-12 sm:px-6 md:py-14 lg:grid-cols-[0.48fr_0.52fr] lg:gap-10 lg:px-8 lg:py-0">
-				<div className="relative z-10 flex translate-y-[-10] flex-col items-center text-center lg:items-start lg:pl-6 lg:text-left xl:pl-1">
+			<div className="mx-auto grid min-h-full max-w-6xl items-center gap-8 px-4 py-12 sm:px-6 md:py-14 lg:grid-cols-[0.52fr_0.46fr] lg:gap-8 lg:px-1 lg:py-0">
+				<div className="relative z-10 flex translate-y-[-10] flex-col items-center text-center lg:items-start lg:pl-0 lg:text-left xl:pl-0">
 					<p
 						data-hero-eyebrow
 						className={`text-[14px] font-semibold uppercase tracking-[0.25em] text-(--color-brand-red) transition-all duration-700 ease-out ${
@@ -102,7 +102,7 @@ function Hero() {
 							<div className="absolute inset-x-[10%] bottom-3 h-12 rounded-full bg-[rgba(255,245,232,0.86)] blur-3xl" />
 							<img
 								src={heroProduct}
-								alt="Foodex Navrattan Mix pack"
+								alt="Foodex Teekha Mix pack"
 								className="relative z-10 mx-auto h-auto w-full select-none drop-shadow-[0_44px_90px_rgba(217,4,41,0.14)]"
 							/>
 						</div>
