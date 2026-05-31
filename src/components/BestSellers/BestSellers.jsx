@@ -2,11 +2,11 @@ import { ArrowRight } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { useRef } from 'react'
 
-import teekhaMixImage from '../../assets/products/teekha-mix-front.png'
+import teekhaMixImage from '../../assets/products/teekha-mixture.png'
 import khattaMeethaImage from '../../assets/products/khatta-meetha.png'
 import alooBhujiaImage from '../../assets/products/aloo-bhujia.png'
 // replaced navratan image with teekha-mix per request
-import navratanMixtureImage from '../../assets/products/teekha-mix-front.png'
+import navratanMixtureImage from '../../assets/products/navratan-mixture.png'
 import nutCrackersImage from '../../assets/products/nut-crackers.png'
 import bhakharwadiImage from '../../assets/products/bhakharwadi.png'
 import besanLadooImage from '../../assets/products/besan-ladoo.png'
@@ -17,7 +17,7 @@ const bestSellerProducts = [
 	{ name: 'Teekha Mixture', price: '₹45.00', image: teekhaMixImage },
 	{ name: 'Khatta Meetha', price: '₹20.00 - ₹200.00', image: khattaMeethaImage },
 	{ name: 'Aloo Bhujia', price: '₹20.00 - ₹90.00', image: alooBhujiaImage },
-	{ name: 'Navratan Mixture', price: '₹20.00 - ₹200.00', image: navratanMixtureImage },
+	{ name: 'Navratan Mix', price: '₹20.00 - ₹200.00', image: navratanMixtureImage },
 	{ name: 'Nut Crackers', price: '₹20.00 - ₹90.00', image: nutCrackersImage },
 	{ name: 'Bhakharwadi', price: '₹40.00', image: bhakharwadiImage },
 	{ name: 'Besan Ladoo', price: '₹149.00', image: besanLadooImage },

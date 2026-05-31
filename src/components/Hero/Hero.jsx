@@ -1,7 +1,7 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 
-import heroProduct from '../../assets/products/teekha-mix-front.png'
+import heroProduct from '../../assets/products/teekha-mix.png'
 
 function Hero() {
 	const productShellRef = useRef(null)
