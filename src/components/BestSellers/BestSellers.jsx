@@ -2,7 +2,8 @@ import { ArrowRight } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { useRef } from 'react'
 
-import teekhaMixImage from '../../assets/products/teekha-mixture.png'
+import teekhaMixFrontImage from '../../assets/products/teekha-mix-front.png'
+import teekhaMixBackImage from '../../assets/products/teekha-mix-back.png'
 import khattaMeethaImage from '../../assets/products/khatta-meetha.png'
 import alooBhujiaImage from '../../assets/products/aloo-bhujia.png'
 // replaced navratan image with teekha-mix per request
@@ -14,7 +15,7 @@ import soanPapdiImage from '../../assets/products/soan-papdi.png'
 import '../../styles/best-sellers.css'
 
 const bestSellerProducts = [
-	{ name: 'Teekha Mixture', price: '₹45.00', image: teekhaMixImage },
+	{ name: 'Teekha Mixture', price: '₹45.00', image: teekhaMixFrontImage },
 	{ name: 'Khatta Meetha', price: '₹20.00 - ₹200.00', image: khattaMeethaImage },
 	{ name: 'Aloo Bhujia', price: '₹20.00 - ₹90.00', image: alooBhujiaImage },
 	{ name: 'Navratan Mix', price: '₹20.00 - ₹200.00', image: navratanMixtureImage },
@@ -25,6 +26,40 @@ const bestSellerProducts = [
 ]
 
 function BestSellers() {
+	const spotlightShellRef = useRef(null)
+
+	const handleSpotlightPointerMove = (event) => {
+		const shell = spotlightShellRef.current
+		if (!shell) {
+			return
+		}
+
+		const rect = event.currentTarget.getBoundingClientRect()
+		const x = (event.clientX - rect.left) / rect.width
+		const y = (event.clientY - rect.top) / rect.height
+		const moveX = (x - 0.5) * 16
+		const moveY = (y - 0.5) * 16
+		const rotateY = (x - 0.5) * 5
+		const rotateX = (0.5 - y) * 4
+
+		shell.style.setProperty('--spotlight-parallax-x', `${moveX.toFixed(2)}px`)
+		shell.style.setProperty('--spotlight-parallax-y', `${moveY.toFixed(2)}px`)
+		shell.style.setProperty('--spotlight-tilt-x', `${rotateX.toFixed(2)}deg`)
+		shell.style.setProperty('--spotlight-tilt-y', `${rotateY.toFixed(2)}deg`)
+	}
+
+	const resetSpotlightPointerMove = () => {
+		const shell = spotlightShellRef.current
+		if (!shell) {
+			return
+		}
+
+		shell.style.setProperty('--spotlight-parallax-x', '0px')
+		shell.style.setProperty('--spotlight-parallax-y', '0px')
+		shell.style.setProperty('--spotlight-tilt-x', '0deg')
+		shell.style.setProperty('--spotlight-tilt-y', '0deg')
+	}
+
 	return (
 		<section aria-label="Best sellers" className="best-sellers-section">
 			<div className="best-sellers-container">
@@ -70,12 +105,19 @@ function BestSellers() {
 					))}
 				</div>
 
+				<div className="best-sellers-grid-cta">
+					<a href="#products" className="best-sellers-view-all-button" aria-label="View all products">
+						<span>View All Products</span>
+						<ArrowRight size={16} aria-hidden="true" />
+					</a>
+				</div>
+
 				<div className="best-sellers-spotlight">
 					<div className="best-sellers-spotlight-copy">
 						<p className="best-sellers-spotlight-kicker">Featured Product Spotlight</p>
 						<h3 className="best-sellers-spotlight-title font-display">Signature Taste of Foodex</h3>
 						<p className="best-sellers-spotlight-description">
-							A premium blend of carefully selected ingredients crafted to deliver the authentic flavour loved by generations.
+							A timeless blend of authentic flavour, quality ingredients and trusted craftsmanship that has delighted families for generations.
 						</p>
 						<a href="#products" className="best-sellers-spotlight-button">
 							Explore Product
@@ -83,45 +125,37 @@ function BestSellers() {
 					</div>
 
 					<div className="best-sellers-spotlight-visual">
-						{/** Outer motion for vertical float; inner tilt wrapper for mouse-follow 3D rotate */}
 						<motion.div
 							animate={{ y: [0, -8, 0] }}
-							transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+							transition={{ duration: 5.6, repeat: Infinity, ease: 'easeInOut' }}
 							className="best-sellers-spotlight-product"
-							onMouseMove={(e) => {
-								const tilt = e.currentTarget.querySelector('.spotlight-tilt')
-								if (!tilt) return
-								const rect = e.currentTarget.getBoundingClientRect()
-								const x = (e.clientX - rect.left) / rect.width
-								const y = (e.clientY - rect.top) / rect.height
-								const rotateY = (x - 0.5) * 2 * 4 // max 4deg
-								const rotateX = (0.5 - y) * 2 * 4
-								tilt.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`
-							}}
-							onMouseLeave={(e) => {
-								const tilt = e.currentTarget.querySelector('.spotlight-tilt')
-								if (!tilt) return
-								tilt.style.transform = 'perspective(900px) rotateX(0deg) rotateY(0deg)'
-							}}
+							onPointerMove={handleSpotlightPointerMove}
+							onPointerLeave={resetSpotlightPointerMove}
 						>
 							<span className="best-sellers-spotlight-layer cream" aria-hidden="true" />
 							<span className="best-sellers-spotlight-layer glow" aria-hidden="true" />
-							<div className="spotlight-tilt">
+
+							<div ref={spotlightShellRef} className="best-sellers-spotlight-parallax-shell">
 								<span className="best-sellers-spotlight-shadow" aria-hidden="true" />
-								<img
-									src={teekhaMixImage}
-									alt="Teekha Mix by Foodex"
-									className="best-sellers-spotlight-image"
-								/>
+								<div className="best-sellers-spotlight-flip-card">
+									<div className="best-sellers-spotlight-face best-sellers-spotlight-face-front">
+										<img
+											src={teekhaMixFrontImage}
+											alt="Teekha Mix pack front"
+											className="best-sellers-spotlight-image"
+										/>
+									</div>
+									<div className="best-sellers-spotlight-face best-sellers-spotlight-face-back">
+										<img
+											src={teekhaMixBackImage}
+											alt="Teekha Mix pack back"
+											className="best-sellers-spotlight-image"
+										/>
+									</div>
+								</div>
 							</div>
 						</motion.div>
 					</div>
-				</div>
-
-				<div className="best-sellers-footer-cta">
-					<a href="#products" className="best-sellers-view-all-button">
-						View All Products
-					</a>
 				</div>
 			</div>
 		</section>
