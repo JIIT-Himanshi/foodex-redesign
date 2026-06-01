@@ -115,7 +115,7 @@
 
 .best-seller-name {
 	margin: 0;
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: 600;
 	line-height: 1.15;
 	letter-spacing: -0.02em;
@@ -169,7 +169,7 @@
 }
 
 .best-sellers-spotlight-kicker {
-	margin: 0 0 12px;
+	margin: 0 8px 12px;
 	font-size: 12px;
 	font-weight: 700;
 	letter-spacing: 0.12em;
