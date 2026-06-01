@@ -71,7 +71,8 @@ function Hero() {
 					>
 						<a
 							href="#products"
-							className="inline-flex h-12 min-w-44 items-center justify-center rounded-full bg-(--color-brand-red) px-7 text-sm font-semibold text-white transition-transform duration-200 hover:-translate-y-0.5 hover:bg-(--color-brand-red)/90"
+							className="inline-flex h-12 min-w-44 items-center justify-center rounded-full bg-(--color-brand-red) px-7 text-sm font-semibold transition-transform duration-200 hover:-translate-y-0.5 hover:bg-(--color-brand-red)/90"
+							style={{ color: '#ffffff' }}
 						>
 							Explore Products
 						</a>
