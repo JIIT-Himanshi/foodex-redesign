@@ -4,6 +4,7 @@ import TrustStrip from './components/TrustStrip/TrustStrip'
 import FeaturedCategories from './components/FeaturedCategories/FeaturedCategories'
 import BestSellers from './components/BestSellers/BestSellers'
 import FoodexDifference from './components/FoodexDifference/FoodexDifference'
+import TrustedPartnersMarquee from './components/TrustedPartnersMarquee/TrustedPartnersMarquee'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <FeaturedCategories />
 			<BestSellers />
       <FoodexDifference />
+      <TrustedPartnersMarquee />
 		</main>
     </>
   )
