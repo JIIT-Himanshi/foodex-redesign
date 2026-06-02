@@ -3,6 +3,7 @@ import Hero from './components/Hero/Hero'
 import TrustStrip from './components/TrustStrip/TrustStrip'
 import FeaturedCategories from './components/FeaturedCategories/FeaturedCategories'
 import BestSellers from './components/BestSellers/BestSellers'
+import FoodexDifference from './components/FoodexDifference/FoodexDifference'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <TrustStrip />
       <FeaturedCategories />
 			<BestSellers />
+      <FoodexDifference />
 		</main>
     </>
   )
