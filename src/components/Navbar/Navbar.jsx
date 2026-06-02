@@ -94,7 +94,7 @@ function Navbar() {
 						<ShoppingCart className="h-4 w-4" />
 					</button>
 
-					<button
+					{/* <button
 						type="button"
 						className="icon-button inline-flex h-10 w-10 rounded-full sm:h-11 sm:w-11"
 						aria-label={theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'}
@@ -102,7 +102,7 @@ function Navbar() {
 						onClick={toggleTheme}
 					>
 						{theme === 'dark' ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
-					</button>
+					</button> */}
 
 					<button
 						type="button"
