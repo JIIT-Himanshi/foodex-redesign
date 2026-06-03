@@ -1,0 +1,205 @@
+.foodex-footer {
+	padding: 0 20px 22px;
+	background: var(--color-bg-primary);
+	color: var(--color-text-primary);
+}
+
+.foodex-footer-divider,
+.foodex-footer-copyright-divider {
+	height: 1px;
+	background: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme='dark'] .foodex-footer-divider,
+[data-theme='dark'] .foodex-footer-copyright-divider {
+	background: rgba(255, 255, 255, 0.08);
+}
+
+.foodex-footer-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 56px 0 44px;
+}
+
+.foodex-footer-grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1.4fr) repeat(3, minmax(0, 1fr));
+	gap: 48px;
+}
+
+.foodex-footer-brand {
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+	max-width: 320px;
+}
+
+.foodex-footer-logo-link {
+	display: inline-flex;
+	width: fit-content;
+	transition: transform 300ms ease;
+}
+
+.foodex-footer-logo-link:hover {
+	transform: translateY(-2px);
+}
+
+.foodex-footer-logo {
+	display: block;
+	height: 52px;
+	width: auto;
+}
+
+.foodex-footer-description {
+	margin: 0;
+	font-size: 15px;
+	line-height: 1.8;
+	color: var(--color-text-secondary);
+}
+
+.foodex-footer-social {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+}
+
+.foodex-footer-social-link {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 36px;
+	height: 36px;
+	border-radius: 999px;
+	color: var(--color-text-secondary);
+	transition: color 300ms ease, transform 300ms ease;
+}
+
+.foodex-footer-social-link:hover {
+	color: var(--color-brand-red);
+	transform: translateY(-2px);
+}
+
+.foodex-footer-social-icon {
+	width: 18px;
+	height: 18px;
+}
+
+.foodex-footer-column {
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+}
+
+.foodex-footer-heading {
+	margin: 0;
+	font-size: 17px;
+	font-weight: 600;
+	letter-spacing: 0.06em;
+	color: var(--color-text-primary);
+}
+
+.foodex-footer-links,
+.foodex-footer-contact-list {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.foodex-footer-link {
+	font-size: 15px;
+	line-height: 1.6;
+	color: var(--color-text-secondary);
+	transition: color 220ms ease, transform 220ms ease;
+}
+
+.foodex-footer-link:hover {
+	color: var(--color-brand-red);
+	transform: translateX(2px);
+}
+
+.foodex-footer-contact-item {
+	display: flex;
+	align-items: flex-start;
+	gap: 10px;
+	font-size: 15px;
+	line-height: 1.7;
+	color: var(--color-text-secondary);
+}
+
+.foodex-footer-contact-icon {
+	flex: 0 0 auto;
+	width: 18px;
+	height: 18px;
+	margin-top: 2px;
+	color: var(--color-brand-red);
+}
+
+.foodex-footer-copyright {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 18px 0 10px;
+	text-align: center;
+}
+
+.foodex-footer-copyright-main {
+	margin: 0;
+	font-size: 14px;
+	font-weight: 500;
+	color: var(--color-text-primary);
+}
+
+.foodex-footer-copyright-sub {
+	margin: 8px 0 0;
+	font-size: 13px;
+	font-weight: 400;
+	color: var(--color-text-secondary);
+	opacity: 0.86;
+}
+
+@media (max-width: 1023px) {
+	.foodex-footer-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.foodex-footer-brand {
+		max-width: none;
+		grid-column: 1 / -1;
+	}
+}
+
+@media (max-width: 767px) {
+	.foodex-footer {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+
+	.foodex-footer-container {
+		padding: 40px 0 34px;
+	}
+
+	.foodex-footer-grid {
+		grid-template-columns: 1fr;
+		gap: 34px;
+	}
+
+	.foodex-footer-logo {
+		height: 46px;
+	}
+
+	.foodex-footer-description,
+	.foodex-footer-link,
+	.foodex-footer-contact-item {
+		font-size: 14px;
+	}
+
+	.foodex-footer-heading {
+		font-size: 16px;
+	}
+
+	.foodex-footer-copyright {
+		padding-top: 16px;
+	}
+}
