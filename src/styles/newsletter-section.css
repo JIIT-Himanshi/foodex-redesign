@@ -1,0 +1,194 @@
+.newsletter-section {
+	position: relative;
+	overflow: hidden;
+	padding: clamp(88px, 10vw, 136px) 20px clamp(96px, 11vw, 152px);
+	background:
+		radial-gradient(120% 140% at 50% 0%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 58%),
+		linear-gradient(180deg, rgba(255, 248, 238, 0.9) 0%, rgba(250, 246, 240, 1) 100%);
+}
+
+.newsletter-watermark {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -46%);
+	font-family: 'Manrope', sans-serif;
+	font-size: clamp(5.2rem, 17vw, 13rem);
+	font-weight: 800;
+	line-height: 0.9;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: rgba(26, 26, 26, 0.035);
+	pointer-events: none;
+	user-select: none;
+	white-space: nowrap;
+	z-index: 0;
+}
+
+.newsletter-container {
+	position: relative;
+	z-index: 1;
+	max-width: 700px;
+	margin: 0 auto;
+}
+
+.newsletter-content {
+	text-align: center;
+}
+
+.newsletter-kicker {
+	margin: 0;
+	font-size: 13px;
+	font-weight: 800;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: var(--color-brand-red);
+}
+
+.newsletter-title {
+	margin: 16px 0 0;
+	font-size: clamp(2.05rem, 5vw, 3.5rem);
+	font-weight: 700;
+	line-height: 1.03;
+	letter-spacing: -0.04em;
+	color: var(--color-text-primary);
+}
+
+.newsletter-description {
+	margin: 18px auto 0;
+	max-width: 640px;
+	font-size: 16px;
+	line-height: 1.82;
+	color: var(--color-text-secondary);
+}
+
+.newsletter-form {
+	margin-top: 36px;
+	display: grid;
+	grid-template-columns: 1fr auto;
+	align-items: center;
+	gap: 12px;
+}
+
+.newsletter-visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+.newsletter-input {
+	height: 52px;
+	width: 100%;
+	padding: 0 20px;
+	border-radius: 999px;
+	border: 1px solid rgba(26, 26, 26, 0.12);
+	background: rgba(255, 255, 255, 0.72);
+	color: var(--color-text-primary);
+	outline: none;
+	transition:
+		border-color 260ms ease,
+		box-shadow 260ms ease,
+		background-color 260ms ease;
+}
+
+.newsletter-input::placeholder {
+	color: rgba(92, 92, 92, 0.9);
+}
+
+.newsletter-input:focus {
+	border-color: rgba(217, 4, 41, 0.45);
+	box-shadow: 0 0 0 4px rgba(217, 4, 41, 0.1);
+	background: rgba(255, 255, 255, 0.92);
+}
+
+.newsletter-button {
+	display: inline-flex;
+	height: 52px;
+	min-width: 148px;
+	align-items: center;
+	justify-content: center;
+	border: 0;
+	border-radius: 999px;
+	background: var(--color-brand-red);
+	padding: 0 28px;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 1;
+	cursor: pointer;
+	transition:
+		transform 220ms ease,
+		box-shadow 220ms ease,
+		background-color 220ms ease;
+	color: #ffffff;
+}
+
+.newsletter-button:hover {
+	transform: translateY(-2px);
+	background: color-mix(in srgb, var(--color-brand-red) 92%, #000 8%);
+	box-shadow: 0 12px 24px rgba(217, 4, 41, 0.18);
+}
+
+.newsletter-button:focus-visible {
+	outline: 2px solid rgba(217, 4, 41, 0.5);
+	outline-offset: 3px;
+}
+
+[data-theme='dark'] .newsletter-section {
+	background:
+		radial-gradient(110% 130% at 50% 4%, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0) 56%),
+		linear-gradient(180deg, rgba(20, 20, 20, 0.96) 0%, rgba(17, 17, 17, 1) 100%);
+}
+
+[data-theme='dark'] .newsletter-watermark {
+	color: rgba(250, 250, 250, 0.038);
+}
+
+[data-theme='dark'] .newsletter-input {
+	border-color: rgba(250, 250, 250, 0.14);
+	background: rgba(250, 250, 250, 0.05);
+	color: var(--color-text-primary);
+}
+
+[data-theme='dark'] .newsletter-input::placeholder {
+	color: rgba(189, 189, 189, 0.85);
+}
+
+[data-theme='dark'] .newsletter-input:focus {
+	border-color: rgba(239, 35, 60, 0.5);
+	box-shadow: 0 0 0 4px rgba(239, 35, 60, 0.14);
+	background: rgba(250, 250, 250, 0.08);
+}
+
+[data-theme='dark'] .newsletter-button:hover {
+	box-shadow: 0 12px 24px rgba(239, 35, 60, 0.22);
+}
+
+@media (max-width: 767px) {
+	.newsletter-section {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+
+	.newsletter-description {
+		font-size: 15px;
+	}
+
+	.newsletter-form {
+		grid-template-columns: 1fr;
+		gap: 10px;
+	}
+
+	.newsletter-button {
+		width: 100%;
+	}
+
+	.newsletter-watermark {
+		font-size: clamp(4rem, 24vw, 8.4rem);
+	}
+}

@@ -5,6 +5,7 @@ import FeaturedCategories from './components/FeaturedCategories/FeaturedCategori
 import BestSellers from './components/BestSellers/BestSellers'
 import FoodexDifference from './components/FoodexDifference/FoodexDifference'
 import TrustedPartnersMarquee from './components/TrustedPartnersMarquee/TrustedPartnersMarquee'
+import NewsletterSection from './components/NewsletterSection/NewsletterSection'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
 			<BestSellers />
       <FoodexDifference />
       <TrustedPartnersMarquee />
+			<NewsletterSection />
 		</main>
     </>
   )
