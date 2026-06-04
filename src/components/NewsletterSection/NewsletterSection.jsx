@@ -9,9 +9,9 @@ function NewsletterSection() {
 
 	return (
 		<section aria-label="Newsletter" className="newsletter-section">
-			<div className="newsletter-watermark" aria-hidden="true">
+			{/* <div className="newsletter-watermark" aria-hidden="true">
 				FOODEX
-			</div>
+			</div> */}
 
 			<div className="newsletter-container">
 				<motion.div
