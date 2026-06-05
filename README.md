@@ -107,6 +107,10 @@ The website is optimized for:
 * Gallery Page
 * Contact Page
 
+## Live Link
+
+https://foodex-redesign.vercel.app/
+
 ## Designed & Developed By
 
 **Himanshi Chauhan**
