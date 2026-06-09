@@ -5,6 +5,8 @@ import flipkartLogo from '../../assets/partners/flipkart.png'
 import zeptoLogo from '../../assets/partners/zepto.png'
 import spencersLogo from '../../assets/partners/spencers.png'
 import metroLogo from '../../assets/partners/metro.png'
+import dealShareLogo from '../../assets/partners/dealShare.png'
+import kohinoorLogo from '../../assets/partners/kohinoor.png'
 
 import '../../styles/trusted-partners-marquee.css'
 
@@ -14,6 +16,8 @@ const partners = [
 	{ name: 'Zepto', logo: zeptoLogo },
 	{ name: "Spencer's", logo: spencersLogo },
 	{ name: 'Metro', logo: metroLogo },
+	{ name: 'DealShare', logo: dealShareLogo },
+	{ name: 'Kohinoor', logo: kohinoorLogo },
 ]
 
 function TrustedPartnersMarquee() {
