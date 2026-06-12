@@ -1,27 +1,30 @@
+import { Routes, Route, useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
 import Navbar from './components/Navbar/Navbar'
-import Hero from './components/Hero/Hero'
-import TrustStrip from './components/TrustStrip/TrustStrip'
-import FeaturedCategories from './components/FeaturedCategories/FeaturedCategories'
-import BestSellers from './components/BestSellers/BestSellers'
-import FoodexDifference from './components/FoodexDifference/FoodexDifference'
-import TrustedPartnersMarquee from './components/TrustedPartnersMarquee/TrustedPartnersMarquee'
-import NewsletterSection from './components/NewsletterSection/NewsletterSection'
 import FooterSection from './components/FooterSection/FooterSection'
+import HomePage from './pages/HomePage'
+import ProductsPage from './pages/ProductsPage'
+import ProductDetailPage from './pages/ProductDetailPage'
 
 function App() {
+  const { pathname } = useLocation()
+
+  // Scroll to top on route change
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+
   return (
     <>
       <Navbar />
       <main className="overflow-x-clip">
-			<Hero />
-      <TrustStrip />
-      <FeaturedCategories />
-			<BestSellers />
-      <FoodexDifference />
-      <TrustedPartnersMarquee />
-			<NewsletterSection />
-      <FooterSection />
-		</main>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/products" element={<ProductsPage />} />
+          <Route path="/products/:slug" element={<ProductDetailPage />} />
+        </Routes>
+        <FooterSection />
+      </main>
     </>
   )
 }

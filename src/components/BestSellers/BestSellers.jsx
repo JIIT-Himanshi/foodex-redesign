@@ -1,6 +1,7 @@
 import { ArrowRight } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { useRef } from 'react'
+import { Link } from 'react-router-dom'
 
 import teekhaMixFrontImage from '../../assets/products/teekha-mix-front.png'
 import teekhaMixBackImage from '../../assets/products/teekha-mix-back.png'
@@ -24,6 +25,15 @@ const bestSellerProducts = [
 	{ name: 'Besan Ladoo', price: '₹149.00', image: besanLadooImage },
 	{ name: 'Soan Papdi', price: '₹69.00 - ₹269.00', image: soanPapdiImage },
 ]
+
+const getProductSlug = (name) => {
+	const map = {
+		'Navratan Mix': 'navratan-mixture',
+		'Teekha Mixture': 'teekha-mixture',
+		'Nut Crackers': 'nut-cracker',
+	}
+	return map[name] || name.toLowerCase().replace(/\s+/g, '-')
+}
 
 function BestSellers() {
 	const spotlightShellRef = useRef(null)
@@ -96,20 +106,20 @@ function BestSellers() {
 									<p className="best-seller-price">{product.price}</p>
 								</div>
 
-								<a href="#products" className="best-seller-explore-link" aria-label={`Explore ${product.name}`}>
+								<Link to={`/products/${getProductSlug(product.name)}`} className="best-seller-explore-link" aria-label={`Explore ${product.name}`}>
 									<span>Explore</span>
 									<ArrowRight size={16} aria-hidden="true" />
-								</a>
+								</Link>
 							</div>
 						</motion.article>
 					))}
 				</div>
 
 				<div className="best-sellers-grid-cta">
-					<a href="#products" className="best-sellers-view-all-button" aria-label="View all products">
+					<Link to="/products" className="best-sellers-view-all-button" aria-label="View all products">
 						<span>View All Products</span>
 						<ArrowRight size={16} aria-hidden="true" />
-					</a>
+					</Link>
 				</div>
 
 				<div className="best-sellers-spotlight">
@@ -119,9 +129,9 @@ function BestSellers() {
 						<p className="best-sellers-spotlight-description">
 							A timeless blend of authentic flavour, quality ingredients and trusted craftsmanship that has delighted families for generations.
 						</p>
-						<a href="#products" className="best-sellers-spotlight-button">
+						<Link to="/products/teekha-mixture" className="best-sellers-spotlight-button">
 							Explore Product
-						</a>
+						</Link>
 					</div>
 
 					<div className="best-sellers-spotlight-visual">

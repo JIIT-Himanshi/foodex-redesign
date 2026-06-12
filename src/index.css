@@ -125,6 +125,14 @@ select {
 	transform: scaleX(1);
 }
 
+.nav-link-active {
+	color: var(--color-brand-red) !important;
+}
+
+.nav-link-active::after {
+	transform: scaleX(1) !important;
+}
+
 .icon-button {
 	align-items: center;
 	justify-content: center;

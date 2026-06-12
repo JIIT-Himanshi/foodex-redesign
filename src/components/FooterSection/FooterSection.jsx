@@ -1,5 +1,6 @@
 import { Mail, MapPin, Phone } from 'lucide-react'
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 import '../../styles/footer-section.css'
 
@@ -40,7 +41,7 @@ function SocialYoutubeIcon() {
 
 function FooterSection() {
 	return (
-		<footer aria-label="Foodex footer" className="foodex-footer">
+		<footer aria-label="Foodex footer" className="foodex-footer" id="contact">
 			<div className="foodex-footer-divider" aria-hidden="true" />
 
 			<div className="foodex-footer-container">
@@ -76,13 +77,37 @@ function FooterSection() {
 					<div className="foodex-footer-column">
 						<h3 className="foodex-footer-heading">Quick Links</h3>
 						<ul className="foodex-footer-links">
-							{quickLinks.map((link) => (
-								<li key={link}>
-									<a href={`#${link.toLowerCase()}`} className="foodex-footer-link">
-										{link}
-									</a>
-								</li>
-							))}
+							{quickLinks.map((link) => {
+								const isHome = link === 'Home'
+								const isProducts = link === 'Products'
+								const lowerLink = link.toLowerCase()
+
+								if (isHome) {
+									return (
+										<li key={link}>
+											<Link to="/" className="foodex-footer-link">
+												{link}
+											</Link>
+										</li>
+									)
+								}
+								if (isProducts) {
+									return (
+										<li key={link}>
+											<Link to="/products" className="foodex-footer-link">
+												{link}
+											</Link>
+										</li>
+									)
+								}
+								return (
+									<li key={link}>
+										<a href={`/#${lowerLink}`} className="foodex-footer-link">
+											{link}
+										</a>
+									</li>
+								)
+							})}
 						</ul>
 					</div>
 
@@ -91,9 +116,9 @@ function FooterSection() {
 						<ul className="foodex-footer-links">
 							{categories.map((category) => (
 								<li key={category}>
-									<a href="#products" className="foodex-footer-link">
+									<Link to={`/products?category=${encodeURIComponent(category)}`} className="foodex-footer-link">
 										{category}
-									</a>
+									</Link>
 								</li>
 							))}
 						</ul>
