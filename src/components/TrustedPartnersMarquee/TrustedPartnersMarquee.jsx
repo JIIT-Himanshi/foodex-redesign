@@ -6,7 +6,8 @@ import zeptoLogo from '../../assets/partners/zepto.png'
 import spencersLogo from '../../assets/partners/spencers.png'
 import metroLogo from '../../assets/partners/metro.png'
 import dealShareLogo from '../../assets/partners/dealShare.png'
-import kohinoorLogo from '../../assets/partners/kohinoor.png'
+import kohinoorLightLogo from '../../assets/partners/kohinoor-lightmode.png'
+import kohinoorDarkLogo from '../../assets/partners/kohinoor-darkmode.png'
 
 import '../../styles/trusted-partners-marquee.css'
 
@@ -17,7 +18,7 @@ const partners = [
 	{ name: "Spencer's", logo: spencersLogo },
 	{ name: 'Metro', logo: metroLogo },
 	{ name: 'DealShare', logo: dealShareLogo },
-	{ name: 'Kohinoor', logo: kohinoorLogo },
+	{ name: 'Kohinoor', logo: kohinoorLightLogo, logoDark: kohinoorDarkLogo },
 ]
 
 function TrustedPartnersMarquee() {
@@ -51,7 +52,14 @@ function TrustedPartnersMarquee() {
 							<div className="trusted-partners-marquee-row">
 								{marqueeItems.map((partner, index) => (
 									<div className="trusted-partners-logo" key={`${partner.name}-${index}`}>
-										<img src={partner.logo} alt={partner.name} className="trusted-partners-logo-image" />
+										{partner.logoDark ? (
+											<>
+												<img src={partner.logo} alt={partner.name} className="trusted-partners-logo-image light-mode-logo" />
+												<img src={partner.logoDark} alt={partner.name} className="trusted-partners-logo-image dark-mode-logo" />
+											</>
+										) : (
+											<img src={partner.logo} alt={partner.name} className="trusted-partners-logo-image" />
+										)}
 									</div>
 								))}
 							</div>

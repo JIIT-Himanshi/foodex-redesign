@@ -127,6 +127,18 @@
 	}
 }
 
+.dark-mode-logo {
+	display: none;
+}
+
+[data-theme='dark'] .light-mode-logo {
+	display: none;
+}
+
+[data-theme='dark'] .dark-mode-logo {
+	display: block;
+}
+
 [data-theme='dark'] .trusted-partners-section {
 	background: transparent;
 }
