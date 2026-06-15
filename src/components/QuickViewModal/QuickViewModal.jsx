@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { X, Plus, Minus, ShoppingCart, Info } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -7,6 +7,7 @@ function QuickViewModal({ product, onClose }) {
   if (!product) return null
 
   const { id, name, category, description, variants, stockCount, frontImage, backImage } = product
+  const navigate = useNavigate()
 
   const [selectedVariant, setSelectedVariant] = useState(variants[0])
   const [quantity, setQuantity] = useState(1)
@@ -175,13 +176,16 @@ function QuickViewModal({ product, onClose }) {
               >
                 {isOutOfStock ? 'Out of Stock' : 'Add to Cart'}
               </button>
-              <Link
-                to={`/products/${id}`}
+              <button
+                type="button"
                 className="quickview-detail-link"
-                onClick={onClose}
+                onClick={() => {
+                  onClose()
+                  setTimeout(() => navigate(`/products/${id}`), 0)
+                }}
               >
                 View Full Details →
-              </Link>
+              </button>
             </div>
           </div>
         </motion.div>

@@ -120,64 +120,64 @@ function ProductsPage() {
       {/* 2. Controls and Search Bar (Sticky) */}
       <div className="products-controls-bar" ref={catalogRef}>
         <div className="products-controls-container">
-          {/* Left Category pills */}
-          <div className="category-pills" role="tablist" aria-label="Product categories">
-            {categories.map((category) => (
-              <button
-                key={category}
-                type="button"
-                role="tab"
-                aria-selected={selectedCategory === category}
-                aria-controls="products-grid"
-                className={`category-pill font-display ${selectedCategory === category ? 'active' : ''}`}
-                onClick={() => handleCategorySelect(category)}
-              >
-                {category}
-              </button>
-            ))}
+          {/* Top Row: Count + Search/Sort */}
+          <div className="products-controls-top-row">
+            <span className="products-count">
+              Showing {sortedProducts.length} {sortedProducts.length === 1 ? 'product' : 'products'}
+            </span>
+            <div className="products-controls-actions">
+              {/* Search Input */}
+              <div className="search-input-wrapper">
+                <Search className="search-input-icon" size={16} />
+                <input
+                  type="text"
+                  placeholder="Search products..."
+                  value={searchQuery}
+                  className="search-input-field"
+                  aria-label="Search products"
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                />
+              </div>
+
+              {/* Sort Dropdown */}
+              <div className="sort-select-wrapper">
+                <SlidersHorizontal className="search-input-icon" size={15} />
+                <select
+                  value={sortBy}
+                  className="sort-select-field font-body"
+                  aria-label="Sort products"
+                  onChange={(e) => setSortBy(e.target.value)}
+                >
+                  <option value="Featured">Featured</option>
+                  <option value="Price Low to High">Price: Low-High</option>
+                  <option value="Price High to Low">Price: High-Low</option>
+                  <option value="Name A-Z">Name: A-Z</option>
+                  <option value="Name Z-A">Name: Z-A</option>
+                </select>
+                <ChevronDown className="sort-select-arrow" size={14} />
+              </div>
+            </div>
           </div>
 
-          {/* Right Actions: Search + Sort */}
-          <div className="products-controls-actions">
-            {/* Search Input */}
-            <div className="search-input-wrapper">
-              <Search className="search-input-icon" size={16} />
-              <input
-                type="text"
-                placeholder="Search products..."
-                value={searchQuery}
-                className="search-input-field"
-                aria-label="Search products"
-                onChange={(e) => setSearchQuery(e.target.value)}
-              />
-            </div>
-
-            {/* Sort Dropdown */}
-            <div className="sort-select-wrapper">
-              <SlidersHorizontal className="search-input-icon" size={15} />
-              <select
-                value={sortBy}
-                className="sort-select-field font-body"
-                aria-label="Sort products"
-                onChange={(e) => setSortBy(e.target.value)}
-              >
-                <option value="Featured">Featured</option>
-                <option value="Price Low to High">Price: Low-High</option>
-                <option value="Price High to Low">Price: High-Low</option>
-                <option value="Name A-Z">Name: A-Z</option>
-                <option value="Name Z-A">Name: Z-A</option>
-              </select>
-              <ChevronDown className="sort-select-arrow" size={14} />
+          {/* Second Row: Category Pills */}
+          <div className="products-controls-bottom-row">
+            <div className="category-pills" role="tablist" aria-label="Product categories">
+              {categories.map((category) => (
+                <button
+                  key={category}
+                  type="button"
+                  role="tab"
+                  aria-selected={selectedCategory === category}
+                  aria-controls="products-grid"
+                  className={`category-pill font-display ${selectedCategory === category ? 'active' : ''}`}
+                  onClick={() => handleCategorySelect(category)}
+                >
+                  {category}
+                </button>
+              ))}
             </div>
           </div>
         </div>
-      </div>
-
-      {/* 3. Product grid metadata */}
-      <div className="products-meta-row">
-        <span className="products-count">
-          Showing {sortedProducts.length} {sortedProducts.length === 1 ? 'product' : 'products'}
-        </span>
       </div>
 
       {/* 4. Products Grid */}
