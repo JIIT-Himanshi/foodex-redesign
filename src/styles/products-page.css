@@ -16,9 +16,9 @@
 /* 1. Products Page Hero Section */
 .products-hero-section {
   position: relative;
-  height: 45vh;
-  min-height: 320px;
-  max-height: 480px;
+  height: 35vh;
+  min-height: 300px;
+  max-height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -70,20 +70,20 @@
 }
 
 .products-hero-title {
-  font-size: clamp(2rem, 5vw, 3.25rem);
-  font-weight: 800;
-  line-height: 1.1;
-  letter-spacing: -0.03em;
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
   color: var(--color-text-primary);
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
 .products-hero-subtitle {
-  font-size: clamp(15px, 2vw, 18px);
+  font-size: clamp(16px, 2vw, 18px);
   line-height: 1.6;
   color: var(--color-text-secondary);
-  max-width: 600px;
-  margin: 0 auto 24px auto;
+  max-width: 540px;
+  margin: 0 auto 32px auto;
 }
 
 .products-hero-button {
@@ -111,20 +111,20 @@
   position: sticky;
   top: 68px; /* Offset to stay below navbar */
   z-index: 40;
-  background-color: rgba(250, 246, 240, 0.85);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  border-bottom: 1px solid var(--color-border);
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0,0,0,0.04);
   transition: background-color 220ms ease;
 }
 
 .products-controls-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 16px 20px;
+  padding: 12px 20px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
 }
 
 @media (min-width: 1024px) {
@@ -151,25 +151,26 @@
 
 .category-pill {
   flex-shrink: 0;
-  height: 38px;
-  padding: 0 18px;
+  height: 36px;
+  padding: 0 16px;
   border-radius: 999px;
-  font-size: 14px;
-  font-weight: 600;
-  background-color: rgba(26, 26, 26, 0.04);
-  color: var(--color-text-primary);
+  font-size: 13px;
+  font-weight: 500;
+  background-color: transparent;
+  color: var(--color-text-secondary);
   border: 1px solid transparent;
   cursor: pointer;
   transition: all 180ms ease;
 }
 
 .category-pill.active {
-  background-color: var(--color-brand-red);
+  background-color: var(--color-text-primary);
   color: #ffffff;
 }
 
 .category-pill:not(.active):hover {
-  background-color: rgba(26, 26, 26, 0.08);
+  background-color: rgba(0, 0, 0, 0.04);
+  color: var(--color-text-primary);
 }
 
 /* Right side actions */
@@ -304,13 +305,13 @@
 .product-card {
   position: relative;
   background-color: #ffffff;
-  border-radius: 28px;
-  border: 1px solid rgba(26, 26, 26, 0.05);
+  border-radius: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
   padding: 16px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 0 10px 24px rgba(26, 26, 26, 0.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
   transition: transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease;
   overflow: hidden;
 }
@@ -318,21 +319,21 @@
 /* Image Zone in Card */
 .product-card-image-zone {
   position: relative;
-  height: 200px;
+  height: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: transparent;
   border-radius: 20px;
   overflow: visible;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
 .product-card-image {
   position: relative;
   z-index: 10;
-  max-height: 90%;
-  max-width: 90%;
+  max-height: 105%;
+  max-width: 100%;
   object-fit: contain;
   transition: transform 300ms ease;
   pointer-events: none;
@@ -340,12 +341,12 @@
 
 .product-card-shadow {
   position: absolute;
-  bottom: 8%;
+  bottom: 0%;
   left: 50%;
   transform: translateX(-50%);
-  width: 70%;
-  height: 14px;
-  background: rgba(0, 0, 0, 0.08);
+  width: 60%;
+  height: 12px;
+  background: rgba(0, 0, 0, 0.1);
   filter: blur(8px);
   border-radius: 50%;
   z-index: 1;
@@ -357,11 +358,11 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(244, 197, 66, 0.22) 0%, rgba(244, 197, 66, 0.08) 55%, rgba(244, 197, 66, 0) 78%);
-  filter: blur(16px);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 70%);
+  filter: blur(12px);
   z-index: 0;
   transition: opacity 300ms ease;
 }
@@ -383,38 +384,31 @@
 }
 
 .product-card-title {
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-size: 16px;
+  font-weight: 600;
   color: var(--color-text-primary);
   margin-bottom: 4px;
-  line-height: 1.2;
-}
-
-.product-card-weight {
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--color-text-secondary);
-  margin-bottom: 10px;
+  line-height: 1.3;
 }
 
 .product-card-bottom-row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: auto;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 .product-card-price-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .product-card-price {
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--color-brand-red);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text-primary);
 }
 
 .product-card-mrp-struck {
@@ -439,12 +433,13 @@
 
 /* Actions */
 .product-card-add-btn {
-  width: 100%;
-  height: 40px;
+  width: 160px;
+  margin: 0 auto;
+  height: 38px;
   border-radius: 999px;
-  background-color: var(--color-brand-red);
+  background-color: var(--color-text-primary);
   color: #ffffff;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 13px;
   cursor: pointer;
   border: none;
@@ -452,14 +447,13 @@
   align-items: center;
   justify-content: center;
   gap: 6px;
-  transition: background-color 200ms ease, transform 200ms ease, box-shadow 200ms ease;
-  box-shadow: 0 4px 12px rgba(217, 4, 41, 0.15);
+  transition: all 200ms ease;
 }
 
 .product-card-add-btn:hover {
-  background-color: #b80322;
-  transform: translateY(-1px);
-  box-shadow: 0 6px 16px rgba(217, 4, 41, 0.25);
+  background-color: var(--color-brand-red);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(217, 4, 41, 0.2);
 }
 
 .product-card-add-btn.disabled {
@@ -473,18 +467,18 @@
 /* Quick View Overlay Button (revealed on hover) */
 .product-card-quick-view-btn {
   position: absolute;
-  top: 12px;
-  right: 12px;
-  width: 36px;
-  height: 36px;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(4px);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--color-text-primary);
-  border: 1px solid var(--color-border);
+  border: 1px solid rgba(0,0,0,0.05);
   cursor: pointer;
   opacity: 0;
   transform: scale(0.9);
@@ -501,18 +495,18 @@
 /* Card hover rules desktop-only */
 @media (min-width: 1024px) {
   .product-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--color-shadow);
-    border-color: rgba(217, 4, 41, 0.24);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 0, 0, 0.08);
   }
 
   .product-card:hover .product-card-image {
-    transform: scale(1.06) rotate(2deg);
+    transform: scale(1.05);
   }
 
   .product-card:hover .product-card-shadow {
-    transform: translateX(-50%) scale(0.85);
-    opacity: 0.6;
+    transform: translateX(-50%) scale(0.9);
+    opacity: 0.8;
   }
 
   .product-card:hover .product-card-quick-view-btn {
@@ -658,7 +652,7 @@
 }
 
 .quickview-image-container {
-  height: 240px;
+  height: 280px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -667,7 +661,7 @@
 
 @media (min-width: 768px) {
   .quickview-image-container {
-    height: 280px;
+    height: 340px;
   }
 }
 
@@ -680,7 +674,7 @@
 }
 
 .quickview-toggle-btn {
-  margin-top: 18px;
+  margin-top: 24px;
   height: 32px;
   padding: 0 16px;
   border-radius: 999px;
@@ -863,7 +857,7 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-top: 8px;
+  margin-top: 16px;
 }
 
 .quickview-add-btn {

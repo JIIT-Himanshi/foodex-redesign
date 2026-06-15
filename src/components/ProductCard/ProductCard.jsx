@@ -9,7 +9,6 @@ function ProductCard({ product, onQuickView }) {
   const minPrice = Math.min(...prices)
   const maxPrice = Math.max(...prices)
 
-  const weightInfo = variants.map((v) => v.name).join(', ')
   const isOutOfStock = stockCount === 0
 
   const renderPrice = () => {
@@ -77,17 +76,9 @@ function ProductCard({ product, onQuickView }) {
             {name}
           </h3>
         </Link>
-        <p className="product-card-weight">{weightInfo}</p>
-
-        {/* Row for price and stock status */}
+        {/* Price */}
         <div className="product-card-bottom-row">
           {renderPrice()}
-          
-          <span
-            className={`product-card-stock ${isOutOfStock ? 'out-of-stock' : 'in-stock'}`}
-          >
-            {isOutOfStock ? 'Out of Stock' : `${stockCount} In Stock`}
-          </span>
         </div>
       </div>
 
