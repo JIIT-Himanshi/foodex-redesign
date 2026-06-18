@@ -406,26 +406,49 @@
 }
 
 .product-card-add-btn {
-  min-width: 110px;
-  max-width: 130px;
-  height: 42px;
-  padding: 12px 18px;
+  /* Fit content width */
+  width: fit-content;
+  /* Height and padding */
+  height: 40px;
+  padding: 8px 18px; /* vertical 8px, horizontal 18px */
   border-radius: 999px;
-  background-color: var(--color-brand-red);
-  color: #ffffff;
+  background-color: var(--add-btn-bg);
+  color: var(--add-btn-text);
   font-weight: 600;
-  /* increased weight */
   font-size: 15px;
-  /* adjusted size */
   cursor: pointer;
   border: none;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  /* spacing between icon and text */
   transition: all 200ms ease;
-  /* smoother transition */
+}
+
+.product-card-add-btn:hover {
+  background-color: #D90429; /* Red background */
+  color: #ffffff; /* White text */
+}
+
+.product-card-add-btn.disabled {
+  background-color: rgba(26, 26, 26, 0.08);
+  color: rgba(26, 26, 26, 0.4);
+  box-shadow: none;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Light mode variables */
+:root {
+  --add-btn-bg: #FFE8EC;
+  --add-btn-text: #D90429;
+}
+/* Dark mode variables */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --add-btn-bg: rgba(217, 4, 41, 0.18);
+    --add-btn-text: #FF5A76;
+  }
 }
 
 .product-card-add-btn:hover {
