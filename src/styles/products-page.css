@@ -308,7 +308,7 @@
   background-color: #ffffff;
   border-radius: 24px;
   border: 1px solid rgba(0, 0, 0, 0.04);
-  padding: 16px;
+  padding: 12px; /* reduced padding for compact height */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -397,62 +397,31 @@
   align-items: center;
   justify-content: space-between;
   margin-top: auto;
-  margin-bottom: 8px;
+  margin-bottom: 4px; /* reduced spacing */
   padding: 0 8px;
 }
 
-.product-card-price-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.product-card-price {
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--color-text-primary);
-}
-
-.product-card-mrp-struck {
-  font-size: 13px;
-  color: var(--color-text-secondary);
-  text-decoration: line-through;
-  margin-left: 4px;
-}
-
-.product-card-stock {
-  font-size: 12px;
-  font-weight: 600;
-}
-
-.product-card-stock.in-stock {
-  color: #2ec4b6;
-}
-
-.product-card-stock.out-of-stock {
-  color: var(--color-brand-red);
-}
-
-/* Actions */
 .product-card-add-btn {
-  width: 120px;
+  min-width: 110px;
+  max-width: 130px;
   height: 42px;
+  padding: 12px 18px;
   border-radius: 999px;
   background-color: var(--color-brand-red);
   color: #ffffff;
-  font-weight: 500;
-  font-size: 14px;
+  font-weight: 600; /* increased weight */
+  font-size: 15px; /* adjusted size */
   cursor: pointer;
   border: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
-  transition: all 300ms ease;
+  gap: 8px; /* spacing between icon and text */
+  transition: all 200ms ease; /* smoother transition */
 }
 
 .product-card-add-btn:hover {
-  background-color: #b80322;
+  background-color: #EF233C; /* slightly darker red */
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(217, 4, 41, 0.2);
 }

@@ -79,23 +79,21 @@ function ProductCard({ product, onQuickView }) {
         {/* Price */}
         <div className="product-card-bottom-row">
           {renderPrice()}
+          <button
+            type="button"
+            className={`product-card-add-btn ${isOutOfStock ? 'disabled' : ''}`}
+            disabled={isOutOfStock}
+            aria-label={isOutOfStock ? `${name} is out of stock` : `Add ${name} to cart`}
+            onClick={(e) => {
+              e.stopPropagation()
+              alert(`Added ${name} (${variants[0].name}) to cart!`)
+            }}
+          >
+            <ShoppingCart size={16} />
+            <span>{isOutOfStock ? 'Out of Stock' : '+ Add'}</span>
+          </button>
         </div>
       </div>
-
-      {/* Add To Cart */}
-      <button
-        type="button"
-        className={`product-card-add-btn ${isOutOfStock ? 'disabled' : ''}`}
-        disabled={isOutOfStock}
-        aria-label={isOutOfStock ? `${name} is out of stock` : `Add ${name} to cart`}
-        onClick={(e) => {
-          e.stopPropagation()
-          alert(`Added ${name} (${variants[0].name}) to cart!`)
-        }}
-      >
-        <ShoppingCart size={15} />
-        <span>{isOutOfStock ? 'Out of Stock' : 'Add to Cart'}</span>
-      </button>
     </motion.article>
   )
 }
