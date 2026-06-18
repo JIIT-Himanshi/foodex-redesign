@@ -320,14 +320,14 @@
 /* Image Zone in Card */
 .product-card-image-zone {
   position: relative;
-  height: 220px;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: transparent;
   border-radius: 20px;
   overflow: visible;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .product-card-image {
@@ -395,15 +395,16 @@
 .product-card-bottom-row {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   margin-top: auto;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
+  padding: 0 8px;
 }
 
 .product-card-price-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .product-card-price {
@@ -434,9 +435,8 @@
 
 /* Actions */
 .product-card-add-btn {
-  width: 160px;
-  margin: 0 auto;
-  height: 48px;
+  width: 120px;
+  height: 42px;
   border-radius: 999px;
   background-color: var(--color-brand-red);
   color: #ffffff;
@@ -447,7 +447,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 6px;
   transition: all 300ms ease;
 }
 
