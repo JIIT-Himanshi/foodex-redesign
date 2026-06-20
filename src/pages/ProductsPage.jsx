@@ -141,7 +141,7 @@ function ProductsPage() {
 
               {/* Sort Dropdown */}
               <div className="sort-select-wrapper">
-                <SlidersHorizontal className="search-input-icon" size={15} />
+                <SlidersHorizontal className="sort-select-icon" size={15} />
                 <select
                   value={sortBy}
                   className="sort-select-field font-body"
