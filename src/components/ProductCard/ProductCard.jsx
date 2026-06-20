@@ -17,14 +17,12 @@ function ProductCard({ product, onQuickView }) {
       const hasDiscount = variant.mrp && variant.mrp > variant.price
       return (
         <div className="product-card-price-container">
-          <span className="product-card-price">
-            ₹{minPrice}
-            {hasDiscount && (
-              <span className="product-card-mrp-struck" aria-label={`Original Price ₹${variant.mrp}`}>
-                MRP ₹{variant.mrp}
-              </span>
-            )}
-          </span>
+          {hasDiscount && (
+            <span className="product-card-mrp-struck" aria-label={`Original Price ₹${variant.mrp}`}>
+              ₹{variant.mrp}
+            </span>
+          )}
+          <span className="product-card-price">₹{minPrice}</span>
         </div>
       )
     }
@@ -89,8 +87,8 @@ function ProductCard({ product, onQuickView }) {
               alert(`Added ${name} (${variants[0].name}) to cart!`)
             }}
           >
-            <ShoppingCart size={16} />
-            <span>{isOutOfStock ? 'Out of Stock' : '+ Add'}</span>
+            {!isOutOfStock && <ShoppingCart size={16} />}
+            <span>{isOutOfStock ? 'Sold Out' : '+ Add'}</span>
           </button>
         </div>
       </div>
