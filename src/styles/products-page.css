@@ -903,7 +903,7 @@
   color: #b80322;
 }
 
-/* 8. Product Detail Page */
+/* 8. Product Detail Page - Premium Overhaul */
 .detail-page-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -916,7 +916,7 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 
 .detail-breadcrumb-link {
@@ -929,32 +929,37 @@
   color: var(--color-brand-red);
 }
 
-/* Main detail layout grid */
+/* Two-column layout */
 .detail-main-layout {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 32px;
-  margin-bottom: 60px;
+  gap: 40px;
+  margin-bottom: 80px;
 }
 
 @media (min-width: 768px) {
   .detail-main-layout {
     grid-template-columns: 1fr 1fr;
-    gap: 48px;
+    gap: 60px;
   }
 }
 
-/* Detail Gallery (Left col) */
+/* Gallery Sticky */
 .detail-gallery-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .detail-gallery-sticky {
+    position: sticky;
+    top: 100px;
+  }
 }
 
 .detail-gallery-main-wrap {
   position: relative;
   width: 100%;
-  height: 300px;
+  height: 350px;
   background: linear-gradient(135deg, rgba(255, 245, 232, 0.4) 0%, rgba(255, 233, 201, 0.2) 100%);
   border-radius: 32px;
   border: 1px solid var(--color-border);
@@ -967,7 +972,7 @@
 
 @media (min-width: 1024px) {
   .detail-gallery-main-wrap {
-    height: 400px;
+    height: 500px;
   }
 }
 
@@ -994,6 +999,7 @@
 .detail-gallery-thumbnails {
   display: flex;
   gap: 12px;
+  justify-content: center;
 }
 
 .detail-gallery-thumbnail {
@@ -1021,11 +1027,10 @@
   object-fit: contain;
 }
 
-/* Detail Info (Right col) */
+/* Info Section */
 .detail-info-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .detail-category-badge {
@@ -1042,169 +1047,270 @@
   margin-bottom: 16px;
 }
 
-.detail-title {
-  font-size: clamp(28px, 4vw, 42px);
+.detail-title-premium {
+  font-size: clamp(32px, 4vw, 48px);
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -0.03em;
   color: var(--color-text-primary);
-  margin-bottom: 12px;
-}
-
-.detail-price-row {
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
   margin-bottom: 16px;
 }
 
-.detail-price {
-  font-size: 28px;
-  font-weight: 700;
-  color: var(--color-brand-red);
-}
-
-.detail-mrp {
-  font-size: 18px;
-  color: var(--color-text-secondary);
-  text-decoration: line-through;
-}
-
-.detail-stock-row {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-
-.detail-stock-row.in-stock {
-  color: #2ec4b6;
-}
-
-.detail-stock-row.out-of-stock {
-  color: var(--color-brand-red);
-}
-
-.detail-description {
-  font-size: 15px;
+.detail-short-description {
+  font-size: 16px;
   line-height: 1.6;
   color: var(--color-text-secondary);
+  margin-bottom: 32px;
+}
+
+/* Price Section */
+.detail-price-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
   margin-bottom: 24px;
 }
 
-.detail-action-buttons {
-  display: flex;
-  gap: 16px;
-  margin-top: 8px;
+.detail-price-premium {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--color-text-primary);
 }
 
-.detail-add-btn {
-  flex: 1;
-  height: 48px;
+.detail-mrp-premium {
+  font-size: 20px;
+  color: var(--color-text-secondary);
+  text-decoration: line-through;
+  font-weight: 500;
+}
+
+.detail-discount-badge {
+  padding: 4px 12px;
+  background-color: var(--color-brand-red);
+  color: #ffffff;
   border-radius: 999px;
-  border: 1px solid var(--color-brand-red);
-  background-color: transparent;
-  color: var(--color-brand-red);
-  font-weight: 600;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+/* Variant & Config */
+.variant-pill-premium {
+  height: 40px;
+  padding: 0 20px;
+  border-radius: 999px;
   font-size: 14px;
+  font-weight: 600;
+  background-color: #ffffff;
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
   cursor: pointer;
   transition: all 200ms ease;
 }
 
-.detail-add-btn:hover {
-  background-color: rgba(217, 4, 41, 0.05);
+.variant-pill-premium.active {
+  background-color: var(--color-brand-red);
+  color: #ffffff;
+  border-color: var(--color-brand-red);
 }
 
-.detail-buy-btn {
-  flex: 1.2;
-  height: 48px;
+.variant-pill-premium:not(.active):hover {
+  border-color: var(--color-text-secondary);
+  background-color: #f9f9f9;
+}
+
+.quantity-adjuster-premium {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--color-border);
   border-radius: 999px;
+  overflow: hidden;
+  background-color: #ffffff;
+  height: 44px;
+}
+
+.quantity-adjuster-premium .quantity-btn {
+  width: 44px;
+  height: 100%;
+}
+
+.quantity-adjuster-premium .quantity-value {
+  width: 40px;
+  font-size: 16px;
+}
+
+/* Buttons */
+.detail-action-buttons-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 32px;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .detail-action-buttons-vertical {
+    flex-direction: row;
+  }
+}
+
+.btn-add-to-cart,
+.btn-buy-now {
+  flex: 1;
+  height: 52px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 200ms ease, box-shadow 200ms ease, background-color 200ms ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-add-to-cart {
   background-color: var(--color-brand-red);
   color: #ffffff;
   border: none;
-  font-weight: 600;
+  box-shadow: 0 8px 24px rgba(217, 4, 41, 0.2);
+}
+
+.btn-add-to-cart:hover:not(:disabled) {
+  background-color: #b80322;
+  transform: scale(1.02);
+  box-shadow: 0 12px 28px rgba(217, 4, 41, 0.3);
+}
+
+.btn-add-to-cart:disabled {
+  background-color: #E5E7EB;
+  color: #9CA3AF;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.btn-buy-now {
+  background-color: #111111;
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.btn-buy-now:hover:not(:disabled) {
+  background-color: #000000;
+  transform: scale(1.02);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+.btn-buy-now:disabled {
+  background-color: #E5E7EB;
+  color: #9CA3AF;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+/* Detail Features Grid */
+.detail-features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.detail-feature-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background-color: rgba(0, 0, 0, 0.02);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
   font-size: 14px;
-  cursor: pointer;
-  box-shadow: 0 6px 16px rgba(217, 4, 41, 0.15);
+  font-weight: 600;
+  color: var(--color-text-primary);
   transition: all 200ms ease;
 }
 
-.detail-buy-btn:hover {
-  background-color: #b80322;
-  transform: translateY(-1px);
+.detail-feature-card:hover {
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.08);
 }
 
-/* 9. Description Accordion Section */
-.detail-tabs-section {
-  border-top: 1px solid var(--color-border);
-  padding-top: 48px;
-  margin-bottom: 64px;
-}
-
-.detail-tabs-header {
-  display: flex;
-  border-bottom: 1px solid var(--color-border);
-  margin-bottom: 24px;
-  overflow-x: auto;
-  scrollbar-width: none;
-}
-
-.detail-tabs-header::-webkit-scrollbar {
-  display: none;
-}
-
-.detail-tab-trigger {
-  padding: 12px 24px;
-  font-size: 15px;
-  font-weight: 600;
-  background: transparent;
-  border: none;
-  color: var(--color-text-secondary);
-  cursor: pointer;
-  position: relative;
-  transition: color 180ms ease;
-  white-space: nowrap;
-}
-
-.detail-tab-trigger.active {
+.feature-icon {
   color: var(--color-brand-red);
 }
 
-.detail-tab-trigger::after {
-  content: '';
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: var(--color-brand-red);
-  transform: scaleX(0);
-  transition: transform 180ms ease;
+/* Info Sections */
+.detail-info-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  margin-top: 24px;
+  border-top: 1px solid var(--color-border);
+  padding-top: 48px;
 }
 
-.detail-tab-trigger.active::after {
-  transform: scaleX(1);
+.info-heading {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  margin-bottom: 20px;
 }
 
-.detail-tab-content {
-  font-size: 15px;
+.info-text {
+  font-size: 16px;
   line-height: 1.7;
   color: var(--color-text-secondary);
+}
+
+/* Nutrition Table */
+.nutrition-table-container {
+  overflow-x: auto;
+}
+
+.nutrition-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+  background-color: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.nutrition-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 15px;
+  color: var(--color-text-primary);
+}
+
+.nutrition-table tr:last-child td {
+  border-bottom: none;
+}
+
+.nutrition-table tr td:first-child {
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.nutrition-table tr td:last-child {
+  text-align: right;
+  font-weight: 700;
 }
 
 /* 10. Related Products */
 .related-section {
   border-top: 1px solid var(--color-border);
-  padding-top: 56px;
+  padding-top: 80px;
+  margin-top: 40px;
 }
 
 .related-title {
-  font-size: 26px;
+  font-size: 32px;
   font-weight: 800;
   letter-spacing: -0.02em;
-  margin-bottom: 32px;
+  margin-bottom: 40px;
   color: var(--color-text-primary);
 }
 
@@ -1282,4 +1388,46 @@
 
 [data-theme='dark'] .quickview-toggle-btn {
   background-color: #242424;
+}
+
+[data-theme='dark'] .variant-pill-premium,
+[data-theme='dark'] .quantity-adjuster-premium {
+  background-color: rgba(30, 30, 30, 0.6);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme='dark'] .variant-pill-premium:not(.active):hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme='dark'] .detail-feature-card {
+  background-color: rgba(255, 255, 255, 0.02);
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme='dark'] .detail-feature-card:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme='dark'] .btn-buy-now {
+  background-color: #FAFAFA;
+  color: #111111;
+}
+
+[data-theme='dark'] .btn-buy-now:hover:not(:disabled) {
+  background-color: #ffffff;
+}
+
+[data-theme='dark'] .btn-buy-now:disabled {
+  background-color: #333333;
+  color: #666666;
+}
+
+[data-theme='dark'] .nutrition-table {
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme='dark'] .nutrition-table td {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
 }
