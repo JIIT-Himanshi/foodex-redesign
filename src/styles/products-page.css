@@ -959,9 +959,12 @@
 .detail-gallery-main-wrap {
   position: relative;
   width: 100%;
-  max-width: 540px; /* Constrain width to allow a neat portrait shape */
-  margin: 0 auto 20px auto; /* Center it */
-  aspect-ratio: 4/5; /* Forces a portrait rectangle instead of square */
+  max-width: 540px;
+  /* Constrain width to allow a neat portrait shape */
+  margin: 0 auto 20px auto;
+  /* Center it */
+  aspect-ratio: 4/5;
+  /* Forces a portrait rectangle instead of square */
   background: linear-gradient(135deg, rgba(255, 245, 232, 0.4) 0%, rgba(255, 233, 201, 0.2) 100%);
   border-radius: 32px;
   border: 1px solid var(--color-border);
@@ -974,7 +977,7 @@
 @media (min-width: 1024px) {
   .detail-gallery-main-wrap {
     /* height is managed by aspect-ratio now */
-    max-height: 600px; 
+    max-height: 600px;
   }
 }
 
@@ -1374,7 +1377,8 @@
 
 [data-theme='dark'] .detail-gallery-main-wrap {
   background: linear-gradient(135deg, rgba(20, 20, 20, 0.3) 0%, rgba(28, 28, 28, 0.1) 100%);
-  border-color: rgba(255, 255, 255, 0.03); /* Extremely subtle border to remove the heavy box feel */
+  border-color: rgba(255, 255, 255, 0.03);
+  /* Extremely subtle border to remove the heavy box feel */
 }
 
 [data-theme='dark'] .detail-gallery-glow {
