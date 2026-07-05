@@ -97,13 +97,23 @@ function Navbar() {
 						}
 
 						return (
-							<a
-								key={item}
-								href={pathname === '/' ? `#${lowerItem}` : `/#${lowerItem}`}
-								className="nav-link text-sm font-medium"
-							>
-								{item}
-							</a>
+							item === 'About' ? (
+								<Link
+									key={item}
+									to="/about"
+									className={`nav-link text-sm font-medium ${pathname === '/about' ? 'nav-link-active' : ''}`}
+								>
+									{item}
+								</Link>
+							) : (
+								<a
+									key={item}
+									href={pathname === '/' ? `#${lowerItem}` : `/#${lowerItem}`}
+									className="nav-link text-sm font-medium"
+								>
+									{item}
+								</a>
+							)
 						)
 					})}
 				</div>
@@ -200,14 +210,25 @@ function Navbar() {
 						}
 
 						return (
-							<a
-								key={item}
-								href={pathname === '/' ? `#${lowerItem}` : `/#${lowerItem}`}
-								className="rounded-2xl px-4 py-3 text-sm font-medium text-(--color-text-primary) transition-colors hover:bg-black/5 hover:text-(--color-brand-red)"
-								onClick={() => setIsMenuOpen(false)}
-							>
-								{item}
-							</a>
+							item === 'About' ? (
+								<Link
+									key={item}
+									to="/about"
+									className={`rounded-2xl px-4 py-3 text-sm font-medium transition-colors hover:bg-black/5 hover:text-(--color-brand-red) ${pathname === '/about' ? 'text-(--color-brand-red) font-semibold' : 'text-(--color-text-primary)'}`}
+									onClick={() => setIsMenuOpen(false)}
+								>
+									{item}
+								</Link>
+							) : (
+								<a
+									key={item}
+									href={pathname === '/' ? `#${lowerItem}` : `/#${lowerItem}`}
+									className="rounded-2xl px-4 py-3 text-sm font-medium text-(--color-text-primary) transition-colors hover:bg-black/5 hover:text-(--color-brand-red)"
+									onClick={() => setIsMenuOpen(false)}
+								>
+									{item}
+								</a>
+							)
 						)
 					})}
 					<button

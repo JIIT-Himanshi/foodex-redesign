@@ -102,9 +102,15 @@ function FooterSection() {
 								}
 								return (
 									<li key={link}>
-										<a href={`/#${lowerLink}`} className="foodex-footer-link">
-											{link}
-										</a>
+										{link === 'About' ? (
+											<Link to="/about" className="foodex-footer-link">
+												{link}
+											</Link>
+										) : (
+											<a href={`/#${lowerLink}`} className="foodex-footer-link">
+												{link}
+											</a>
+										)}
 									</li>
 								)
 							})}
