@@ -137,8 +137,8 @@
 
 .about-hero-section {
 	position: relative;
-	min-height: 62vh;
-	max-height: 68vh;
+	min-height: 68vh;
+	max-height: 74vh;
 	overflow: hidden;
 	background: #19130f;
 }
@@ -166,7 +166,7 @@
 	z-index: 2;
 	display: flex;
 	align-items: center;
-	min-height: 62vh;
+	min-height: 68vh;
 	padding: 96px 0;
 }
 
