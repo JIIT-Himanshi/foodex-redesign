@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import { BadgeCheck, Users } from 'lucide-react'
 
 import founderPhoto from '../../assets/about/founder-subhash-bansal.jpg'
 import directorPhoto from '../../assets/about/director-rekha-bansal.jpg'
@@ -7,27 +6,60 @@ import businessHeadPhoto from '../../assets/about/business-head-as-bhati.jpg'
 
 const leaders = [
 	{
+		id: 'founder',
 		name: 'Subhash Bansal',
 		designation: 'Founder & Director',
-		role: 'Founder',
-		description: 'Guided by an entrepreneurial approach and long-term customer relationships, he helped shape the Foodex foundation with discipline and ambition.',
 		photo: founderPhoto,
+		description:
+			'Guiding the brand with steady decisions, long-term thinking, and a careful focus on consistency across every part of the business.',
 	},
 	{
+		id: 'director',
 		name: 'Rekha Bansal',
 		designation: 'Director',
-		role: 'Director',
-		description: 'She brings a steady focus on operational quality, brand stewardship, and the consistency needed to grow with trust.',
 		photo: directorPhoto,
+		description:
+			'Overseeing operations with a calm, detail-oriented approach that keeps the brand organized, responsive, and dependable.',
 	},
 	{
+		id: 'business-head',
 		name: 'A. S. Bhati',
 		designation: 'Business Head',
-		role: 'Business Head',
-		description: 'He supports market expansion, customer relationships, and modern distribution execution across the company network.',
 		photo: businessHeadPhoto,
+		description:
+			'Leading growth and relationships with a practical view of retail needs, market expansion, and brand presentation.',
 	},
 ]
+
+function LeaderCard({ leader }) {
+	return (
+		<motion.article
+			className="about-leader-card glass-card"
+			variants={{
+				hidden: { opacity: 0, y: 18 },
+				visible: { opacity: 1, y: 0 },
+			}}
+			transition={{ duration: 0.5, ease: 'easeOut' }}
+			whileHover={{ y: -4 }}
+		>
+			<div className="about-leader-photo-wrap">
+				<img
+					src={leader.photo}
+					alt={leader.name}
+					className="about-leader-photo"
+					loading="lazy"
+					decoding="async"
+				/>
+			</div>
+
+			<div className="about-leader-body">
+				<p className="about-leader-designation">{leader.designation}</p>
+				<h3 className="about-leader-name font-display">{leader.name}</h3>
+				<p className="about-leader-description">{leader.description}</p>
+			</div>
+		</motion.article>
+	)
+}
 
 function LeadershipSection() {
 	return (
@@ -39,7 +71,7 @@ function LeadershipSection() {
 				</div>
 
 				<motion.div
-					className="about-leadership-grid"
+					className="about-leadership-grid about-leadership-grid-balanced"
 					initial="hidden"
 					whileInView="visible"
 					viewport={{ once: true, amount: 0.2 }}
@@ -49,43 +81,9 @@ function LeadershipSection() {
 					}}
 				>
 					{leaders.map((leader) => (
-						<motion.article
-							key={leader.name}
-							className="about-leader-card glass-card"
-							variants={{
-								hidden: { opacity: 0, y: 24 },
-								visible: { opacity: 1, y: 0 },
-							}}
-							transition={{ duration: 0.55, ease: 'easeOut' }}
-							whileHover={{ y: -7 }}
-						>
-							<div className="about-leader-photo-wrap">
-								<img
-									src={leader.photo}
-									alt={leader.name}
-									className="about-leader-photo"
-									loading="lazy"
-									decoding="async"
-								/>
-							</div>
-
-							<div className="about-leader-body">
-								<div className="about-leader-role-row">
-									<BadgeCheck size={16} />
-									<span>{leader.role}</span>
-								</div>
-								<h3 className="about-leader-name font-display">{leader.name}</h3>
-								<p className="about-leader-designation">{leader.designation}</p>
-								<p className="about-leader-description">{leader.description}</p>
-							</div>
-						</motion.article>
+						<LeaderCard key={leader.id} leader={leader} />
 					))}
 				</motion.div>
-
-				<div className="about-leadership-note">
-					<Users size={16} />
-					<span>Leadership focused on quality, consistency, and steady brand growth.</span>
-				</div>
 			</div>
 		</section>
 	)

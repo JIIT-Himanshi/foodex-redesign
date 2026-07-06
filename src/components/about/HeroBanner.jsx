@@ -12,9 +12,9 @@ function HeroBanner() {
 				className="about-hero-image"
 				loading="lazy"
 				decoding="async"
-				initial={{ scale: 1.08, opacity: 0 }}
+				initial={{ scale: 1.02, opacity: 0 }}
 				animate={{ scale: 1, opacity: 1 }}
-				transition={{ duration: 1.1, ease: 'easeOut' }}
+				transition={{ duration: 0.9, ease: 'easeOut' }}
 			/>
 
 			<div className="about-hero-overlay" aria-hidden="true" />
@@ -27,9 +27,7 @@ function HeroBanner() {
 					transition={{ duration: 0.7, ease: 'easeOut' }}
 				>
 					<p className="about-section-kicker">About Foodex India</p>
-					<h1 className="about-hero-title font-display">
-						About Foodex India
-					</h1>
+					<h1 className="about-hero-title font-display">About Foodex India</h1>
 					<p className="about-hero-subtitle">
 						Delivering authentic taste, trusted quality, and memorable experiences for over 26 years.
 					</p>
