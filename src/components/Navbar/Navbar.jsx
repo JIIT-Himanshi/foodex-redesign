@@ -105,6 +105,14 @@ function Navbar() {
 								>
 									{item}
 								</Link>
+							) : item === 'Contact' ? (
+								<Link
+									key={item}
+									to="/contact"
+									className={`nav-link text-sm font-medium ${pathname === '/contact' ? 'nav-link-active' : ''}`}
+								>
+									{item}
+								</Link>
 							) : (
 								<a
 									key={item}
@@ -215,6 +223,15 @@ function Navbar() {
 									key={item}
 									to="/about"
 									className={`rounded-2xl px-4 py-3 text-sm font-medium transition-colors hover:bg-black/5 hover:text-(--color-brand-red) ${pathname === '/about' ? 'text-(--color-brand-red) font-semibold' : 'text-(--color-text-primary)'}`}
+									onClick={() => setIsMenuOpen(false)}
+								>
+									{item}
+								</Link>
+							) : item === 'Contact' ? (
+								<Link
+									key={item}
+									to="/contact"
+									className={`rounded-2xl px-4 py-3 text-sm font-medium transition-colors hover:bg-black/5 hover:text-(--color-brand-red) ${pathname === '/contact' ? 'text-(--color-brand-red) font-semibold' : 'text-(--color-text-primary)'}`}
 									onClick={() => setIsMenuOpen(false)}
 								>
 									{item}
