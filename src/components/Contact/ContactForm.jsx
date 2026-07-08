@@ -49,8 +49,9 @@ function ContactForm() {
 							<div className="flex flex-col gap-6">
 								<div>
 									<h4 className="font-display text-lg font-bold text-(--color-text-primary) mb-2">Email Us</h4>
-									<p className="font-body text-(--color-text-secondary) leading-relaxed">
+									<p className="font-body text-(--color-text-secondary) leading-relaxed flex flex-col gap-1">
 										<a href="mailto:asbhati@foodexindia.com" className="hover:text-(--color-brand-red) transition-colors">asbhati@foodexindia.com</a>
+										<a href="mailto:customercare@foodexindia.com" className="hover:text-(--color-brand-red) transition-colors">customercare@foodexindia.com</a>
 									</p>
 								</div>
 								<div>
