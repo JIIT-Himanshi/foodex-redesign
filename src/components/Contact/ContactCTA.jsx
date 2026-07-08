@@ -24,7 +24,8 @@ function ContactCTA() {
 						<div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
 							<Link 
 								to="/products"
-								className="inline-flex h-14 items-center justify-center rounded-full bg-[#ffffff] px-8 font-body font-semibold text-(--color-brand-red) transition-transform duration-300 hover:-translate-y-1 shadow-[0_8px_20px_rgba(0,0,0,0.15)]"
+								className="inline-flex h-14 items-center justify-center rounded-full bg-[#ffffff] px-8 font-body font-semibold transition-transform duration-300 hover:-translate-y-1 shadow-[0_8px_20px_rgba(0,0,0,0.15)]"
+								style={{ color: 'var(--color-brand-red)' }}
 							>
 								Explore Products
 							</Link>
