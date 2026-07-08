@@ -38,26 +38,29 @@ function ContactForm() {
 							<div>
 								<h4 className="font-display text-lg font-bold text-(--color-text-primary) mb-2">Corporate Office</h4>
 								<p className="font-body text-(--color-text-secondary) leading-relaxed">
-									123 Foodex Industrial Estate, Phase 1,<br />
-									New Delhi 110020, India
+									Zee Foodex (India) Pvt. Ltd,<br />
+									95, DLF Industrial Area,Phase-1,<br />
+									Faridabad-121003
 								</p>
 							</div>
 							
 							<div className="h-[1px] w-full bg-(--color-border)"></div>
 							
-							<div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+							<div className="flex flex-col gap-6">
 								<div>
-									<h4 className="font-display text-lg font-bold text-(--color-text-primary) mb-2">Business Enquiries</h4>
+									<h4 className="font-display text-lg font-bold text-(--color-text-primary) mb-2">Email Us</h4>
 									<p className="font-body text-(--color-text-secondary) leading-relaxed">
-										<a href="mailto:sales@foodex.in" className="hover:text-(--color-brand-red) transition-colors">sales@foodex.in</a><br />
-										+91 98765 43210
+										<a href="mailto:asbhati@foodexindia.com" className="hover:text-(--color-brand-red) transition-colors">asbhati@foodexindia.com</a>
 									</p>
 								</div>
 								<div>
-									<h4 className="font-display text-lg font-bold text-(--color-text-primary) mb-2">General Support</h4>
+									<h4 className="font-display text-lg font-bold text-(--color-text-primary) mb-2">Call Us</h4>
 									<p className="font-body text-(--color-text-secondary) leading-relaxed">
-										<a href="mailto:hello@foodex.in" className="hover:text-(--color-brand-red) transition-colors">hello@foodex.in</a><br />
-										+91 11 2345 6789
+										<strong>Mr. Vikas Bansal:</strong> +91-9896256933, 9416891933 <br />
+										<span className="text-[14px] opacity-80">(Export & Rest of India)</span>
+										<br /><br />
+										<strong>Mr. Sanjay Pathak:</strong> +91-9810609574 <br />
+										<span className="text-[14px] opacity-80">(Delhi, Bihar, Eastern U.P.)</span>
 									</p>
 								</div>
 							</div>

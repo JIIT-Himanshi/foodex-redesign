@@ -5,17 +5,17 @@ const contactDetails = [
 	{
 		icon: MapPin,
 		title: 'Address',
-		description: '123 Foodex Industrial Estate, Phase 1, New Delhi 110020, India',
+		description: 'Zee Foodex (India) Pvt. Ltd,\n95, DLF Industrial Area,Phase-1,\nFaridabad-121003',
 	},
 	{
 		icon: Phone,
 		title: 'Phone Numbers',
-		description: '+91 98765 43210\n+91 11 2345 6789',
+		description: 'Mr. Vikas Bansal: +91-9896256933, 9416891933\n(Export & Rest of India)\n\nMr. Sanjay Pathak: +91-9810609574\n(Delhi, Bihar, Eastern U.P.)',
 	},
 	{
 		icon: Mail,
 		title: 'Email Address',
-		description: 'hello@foodex.in\nsales@foodex.in',
+		description: 'asbhati@foodexindia.com',
 	},
 	{
 		icon: Clock,
