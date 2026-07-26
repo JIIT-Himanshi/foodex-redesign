@@ -8,6 +8,7 @@ import ProductsPage from './pages/ProductsPage'
 import ProductDetailPage from './pages/ProductDetailPage'
 import ContactPage from './pages/ContactPage'
 import DistributorPage from './pages/DistributorPage'
+import GalleryPage from './pages/GalleryPage'
 
 function App() {
   const { pathname } = useLocation()
@@ -26,6 +27,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/products" element={<ProductsPage />} />
           <Route path="/products/:slug" element={<ProductDetailPage />} />
+          <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/distributors" element={<DistributorPage />} />
         </Routes>

@@ -105,6 +105,14 @@ function Navbar() {
 								>
 									{item}
 								</Link>
+							) : item === 'Gallery' ? (
+								<Link
+									key={item}
+									to="/gallery"
+									className={`nav-link text-sm font-medium ${pathname === '/gallery' ? 'nav-link-active' : ''}`}
+								>
+									{item}
+								</Link>
 							) : item === 'Contact' ? (
 								<Link
 									key={item}
@@ -231,6 +239,15 @@ function Navbar() {
 									key={item}
 									to="/about"
 									className={`rounded-2xl px-4 py-3 text-sm font-medium transition-colors hover:bg-black/5 hover:text-(--color-brand-red) ${pathname === '/about' ? 'text-(--color-brand-red) font-semibold' : 'text-(--color-text-primary)'}`}
+									onClick={() => setIsMenuOpen(false)}
+								>
+									{item}
+								</Link>
+							) : item === 'Gallery' ? (
+								<Link
+									key={item}
+									to="/gallery"
+									className={`rounded-2xl px-4 py-3 text-sm font-medium transition-colors hover:bg-black/5 hover:text-(--color-brand-red) ${pathname === '/gallery' ? 'text-(--color-brand-red) font-semibold' : 'text-(--color-text-primary)'}`}
 									onClick={() => setIsMenuOpen(false)}
 								>
 									{item}
