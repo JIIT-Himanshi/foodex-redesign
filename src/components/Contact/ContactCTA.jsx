@@ -6,9 +6,9 @@ function ContactCTA() {
 		<section className="bg-(--color-brand-red) text-[#ffffff] overflow-hidden relative py-16 md:py-24 px-4 sm:px-6">
 			<div className="mx-auto max-w-6xl relative z-10">
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-					
+
 					{/* Left Side: Content */}
-					<motion.div 
+					<motion.div
 						initial={{ opacity: 0, x: -20 }}
 						whileInView={{ opacity: 1, x: 0 }}
 						viewport={{ once: true, margin: '-50px' }}
@@ -22,14 +22,14 @@ function ContactCTA() {
 							Whether you want to stock our products or explore bulk buying options, we're ready to partner with you and bring the authentic taste of Foodex to your customers.
 						</p>
 						<div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-							<Link 
+							<Link
 								to="/products"
 								className="inline-flex h-14 items-center justify-center rounded-full bg-[#ffffff] px-8 font-body font-semibold transition-transform duration-300 hover:-translate-y-1 shadow-[0_8px_20px_rgba(0,0,0,0.15)]"
 								style={{ color: 'var(--color-brand-red)' }}
 							>
 								Explore Products
 							</Link>
-							<button 
+							<button
 								onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
 								className="inline-flex h-14 items-center justify-center rounded-full bg-transparent border-2 border-white/30 px-8 font-body font-semibold text-[#ffffff] transition-all duration-300 hover:-translate-y-1 hover:border-[#ffffff] hover:bg-white/10"
 							>
@@ -48,7 +48,7 @@ function ContactCTA() {
 					>
 						{/* Background glowing effect for the image */}
 						<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] rounded-full bg-white/5 blur-[80px]"></div>
-						
+
 						<motion.img
 							src="https://static.vecteezy.com/system/resources/previews/067/223/664/non_2x/namkeen-with-chili-and-fire-flames-on-a-transparent-background-free-png.png"
 							alt="Foodex Premium Namkeen"

@@ -1,24 +1,24 @@
 # Foodex India Redesign
 
-> **A modern React-based redesign of the official Foodex India website, focused on delivering a premium digital experience through elegant UI/UX, smooth animations, reusable components, and fully responsive design.**
+> **A premium React-based redesign of the official Foodex India website focused on delivering a modern, scalable, and visually engaging digital experience through elegant UI/UX, smooth animations, reusable components, and responsive design.**
 
-The goal of this project is to transform the traditional Foodex India website into a clean, premium, and modern web experience while preserving the brand's identity and showcasing its products, business presence, and corporate values.
+This project reimagines the traditional Foodex India website with a clean and modern interface while preserving the brand's identity. The redesign emphasizes performance, accessibility, reusable architecture, premium animations, and an improved user experience across all devices.
 
 ---
 
 # Project Overview
 
-Foodex India is a leading Indian food brand offering premium namkeen, sweets, cookies, gift packs, and ready-to-eat products.
+Foodex India is one of India's growing FMCG brands offering premium namkeen, sweets, cookies, gift packs, and ready-to-eat food products.
 
-This redesign focuses on:
+This redesign aims to modernize the company's digital presence by introducing:
 
-* Modern UI/UX Design
-* Premium Visual Identity
-* Fully Responsive Layout
-* Smooth Micro-interactions
-* Reusable Component Architecture
-* Performance-Oriented Development
-* Clean and Scalable React Codebase
+- Premium UI/UX Design
+- Responsive First Development
+- Modern Component Architecture
+- Interactive User Experience
+- Smooth Animations
+- Reusable Design System
+- Performance Optimized Frontend
 
 ---
 
@@ -26,105 +26,121 @@ This redesign focuses on:
 
 ## Home
 
-* Premium Hero Section
-* Brand Trust Statistics
-* Featured Product Categories
-* Best Sellers
-* Product Spotlight
-* Trusted Retail & Distribution Partners
-* Foodex Difference Section
-* Newsletter Subscription
-* Modern Footer
+- Premium Hero Section
+- Animated Product Showcase
+- Brand Trust Statistics
+- Featured Categories
+- Best Selling Products
+- Product Spotlight
+- Distribution Network Section
+- Why Choose Foodex
+- Newsletter Subscription
+- Premium Footer
 
 ---
 
 ## Products
 
-* Premium Product Listing
-* Category Filtering
-* Interactive Product Cards
-* Quick View Modal
-* Individual Product Detail Pages
-* Product Image Gallery
-* Related Products Section
-* Responsive Product Layout
+- Product Listing
+- Category Filters
+- Interactive Product Cards
+- Product Detail Pages
+- Image Gallery
+- Related Products
+- Responsive Product Grid
 
 ---
 
 ## About
 
-* Premium Hero Section
-* Company Story
-* Leadership Team
-* Brand Values
-* Manufacturing & Quality Commitment
-* Business Timeline
-* Modern CTA Section
+- Brand Story
+- Company Journey
+- Leadership Section
+- Core Values
+- Manufacturing Excellence
+- Business Timeline
+- Premium CTA
 
 ---
 
 ## Contact
 
-* Premium Hero Section
-* Contact Information Cards
-* Interactive Google Map
-* Business Enquiry Form
-* FAQ Accordion
-* Premium CTA Section
-* Fully Responsive Layout
+- Modern Hero Section
+- Contact Information Cards
+- Interactive Google Maps
+- Business Enquiry Form
+- FAQ Accordion
+- Premium CTA Section
 
 ---
 
 ## Distributors
 
-* Premium Business Hero Section
-* Why Partner with Foodex
-* Distribution Network Statistics
-* Business Benefits
-* Partnership Process Timeline
-* Distributor Enquiry Form
-* FAQ Section
-* Business CTA Section
-* Fully Responsive Layout
+- Business Hero Section
+- Why Partner With Foodex
+- Distribution Statistics
+- Business Benefits
+- Partnership Timeline
+- Distributor Registration Form
+- FAQ Section
+- Call-To-Action Section
 
 ---
 
-## Gallery *(In Progress)*
+## Gallery *(Currently Under Development)*
 
-* Company Journey
-* Business Events
-* Distributor Meets
-* Award Ceremonies
-* Corporate Moments
-* Premium Image Gallery
-* Fullscreen Lightbox Experience
-* Scroll-based Animations
-* Responsive Masonry Layout
+- Premium Hero Banner
+- Featured Moments
+- Masonry Image Gallery
+- Business Events
+- Corporate Meetings
+- Award Ceremonies
+- Distributor Meets
+- Company Journey
+- Fullscreen Lightbox
+- GSAP Scroll Animations
+- Responsive Gallery Layout
 
 ---
 
 # Tech Stack
 
-* React
-* Vite
-* JavaScript (ES6+)
-* Tailwind CSS
-* Framer Motion
-* GSAP
-* Lucide React
+### Frontend
+
+- React
+- Vite
+- JavaScript (ES6+)
+
+### Styling
+
+- Tailwind CSS
+- CSS Variables
+- Responsive Design
+
+### Animation
+
+- Framer Motion
+- GSAP
+
+### Icons
+
+- Lucide React
 
 ---
 
 # Design Highlights
 
-* Premium Modern UI
-* Glassmorphism Effects
-* Soft Gradients
-* Smooth Page Animations
-* Responsive Layout System
-* Consistent Design Language
-* Reusable Components
-* Business-focused User Experience
+- Premium Business UI
+- Modern Visual Hierarchy
+- Reusable Components
+- Responsive Grid System
+- Glassmorphism Elements
+- Soft Gradients
+- Smooth Page Transitions
+- Interactive Hover Effects
+- Scroll-Based Animations
+- Brand Consistent Color Palette
+- Light & Dark Theme Support
 
 ---
 
@@ -132,46 +148,45 @@ This redesign focuses on:
 
 Optimized for:
 
-* Desktop
-* Tablet
-* Mobile
+- Desktop
+- Laptop
+- Tablet
+- Mobile
 
 ---
 
-# Current Development Status
+# Current Development Progress
 
-## Completed
+### ✅ Completed
 
-* Responsive Navigation
-* Home Page
-* Products Page
-* Product Detail Page
-* About Page
-* Contact Page
-* Distributor Page
-* Theme Support
-* Responsive Layout
-* Reusable Components
-* Premium Animations
+- Responsive Navigation
+- Home Page
+- Products Page
+- Product Detail Page
+- About Page
+- Contact Page
+- Distributor Page
+- Theme Switching
+- Reusable Component Library
+- Responsive Layout System
+- GSAP & Framer Motion Animations
 
-## Currently Working On
+### 🚧 Currently Developing
 
-* Gallery Page
+- Gallery Page
+- Advanced Image Viewer
+- Masonry Layout
+- Interactive Gallery Experience
 
-## Planned
+### 📌 Upcoming Features
 
-* Global Search Experience
-* User Account
-* Shopping Cart
-* Order Online Flow
-* Final UI Polish
-* Performance Optimization
-
----
-
-# Live Demo
-
-https://foodex-redesign.vercel.app/
+- Global Product Search
+- Shopping Cart
+- User Authentication
+- Order Online Flow
+- Performance Optimization
+- Accessibility Improvements
+- SEO Optimization
 
 ---
 
@@ -179,18 +194,55 @@ https://foodex-redesign.vercel.app/
 
 ```text
 src/
+│
 ├── assets/
 ├── components/
-│   ├── Hero/
 │   ├── Navbar/
+│   ├── Footer/
+│   ├── Hero/
+│   ├── Products/
 │   ├── Contact/
-│   ├── Distributors/
-│   └── ...
+│   ├── Distributor/
+│   ├── Gallery/
+│   └── Shared/
+│
 ├── data/
+├── hooks/
 ├── pages/
 ├── styles/
-└── App.jsx
+├── utils/
+├── App.jsx
+└── main.jsx
 ```
+
+---
+
+# Live Demo
+
+🌐 **https://foodex-redesign.vercel.app/**
+
+---
+
+# Project Goals
+
+- Redesign the existing Foodex India website with a premium modern experience.
+- Improve usability and accessibility across all devices.
+- Build a scalable frontend architecture using reusable React components.
+- Create engaging user interactions with GSAP and Framer Motion.
+- Maintain consistency through a unified design system.
+
+---
+
+# Future Enhancements
+
+- Product Search Experience
+- Shopping Cart
+- User Accounts
+- Wishlist
+- CMS Integration
+- Backend APIs
+- Product Management Dashboard
+- Performance & SEO Improvements
 
 ---
 
@@ -200,12 +252,14 @@ src/
 
 Frontend Developer • React Developer • UI/UX Enthusiast
 
----
-
-### Project Status
-
-🚧 Active Development (Phase 8 – Gallery Page)
+GitHub: **https://github.com/HimanshiChauhan**
 
 ---
 
-Foodex India Redesign © 2026
+## Project Status
+
+**🚧 Active Development — Phase 8 (Gallery Page)**
+
+---
+
+© 2026 Foodex India Redesign. Built with React, Tailwind CSS, GSAP, and Framer Motion.
