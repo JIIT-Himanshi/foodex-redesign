@@ -8,12 +8,12 @@ function LeadershipMoments({ onCardClick }) {
   return (
     <section id="leadership" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28 scroll-mt-32">
       {/* Minimal Header */}
-      <div className="mb-12 flex items-baseline justify-between border-b border-white/10 pb-6">
-        <h2 className="font-display text-3xl sm:text-5xl font-extrabold tracking-tight text-white">
-          <span className="text-red-500 mr-4 font-mono text-2xl sm:text-4xl">05</span>
+      <div className="mb-12 flex items-baseline justify-between gallery-section-divider border-b pb-6">
+        <h2 className="font-display text-3xl sm:text-5xl font-extrabold tracking-tight gallery-section-heading">
+          <span className="text-(--color-brand-red) mr-4 font-mono text-2xl sm:text-4xl">05</span>
           Executive Leadership
         </h2>
-        <span className="text-xs font-mono uppercase tracking-widest text-gray-400 hidden sm:inline">
+        <span className="text-xs font-mono uppercase tracking-widest gallery-section-meta hidden sm:inline">
           [ DIRECTORS & BOARD ]
         </span>
       </div>

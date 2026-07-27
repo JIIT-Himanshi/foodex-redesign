@@ -8,17 +8,17 @@ function GalleryStats() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="flex flex-wrap items-center justify-between gap-6 rounded-2xl border border-white/10 bg-white/5 px-8 py-5 backdrop-blur-xl text-gray-300"
+        className="gallery-index-container flex flex-wrap items-center justify-between gap-6 rounded-2xl px-8 py-5"
       >
-        <span className="font-display text-sm font-semibold tracking-wider uppercase text-gray-400">
+        <span className="gallery-index-label font-display text-sm font-semibold tracking-wider uppercase">
           Curated Visual Index
         </span>
-        <div className="flex items-center gap-8 text-xs sm:text-sm font-medium tracking-wide">
+        <div className="gallery-index-text flex items-center gap-8 text-xs sm:text-sm font-medium tracking-wide">
           <span>22 Selected Photographs</span>
-          <span className="text-gray-600">•</span>
+          <span className="opacity-40">•</span>
           <span>7 Editorial Chapters</span>
-          <span className="text-gray-600">•</span>
-          <span className="text-amber-400 font-semibold">1998 — 2024</span>
+          <span className="opacity-40">•</span>
+          <span className="text-(--color-brand-red) font-semibold">1998 — 2024</span>
         </div>
       </motion.div>
     </section>

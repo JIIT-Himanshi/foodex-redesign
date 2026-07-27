@@ -10,10 +10,10 @@ function GalleryCTA() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="relative overflow-hidden rounded-[32px] border border-white/15 bg-gradient-to-br from-neutral-900 via-black to-neutral-900 p-10 sm:p-16 text-center backdrop-blur-2xl shadow-2xl"
+        className="relative overflow-hidden rounded-[32px] border border-black/10 dark:border-white/15 bg-gradient-to-br from-neutral-900 via-black to-neutral-900 p-10 sm:p-16 text-center backdrop-blur-2xl shadow-2xl text-white"
       >
         <div className="relative z-10 max-w-3xl mx-auto">
-          <span className="font-mono text-xs font-semibold uppercase tracking-widest text-red-500 mb-4 inline-block">
+          <span className="font-mono text-xs font-semibold uppercase tracking-widest text-red-400 mb-4 inline-block">
             ENTERPRISE PARTNERSHIPS
           </span>
 
