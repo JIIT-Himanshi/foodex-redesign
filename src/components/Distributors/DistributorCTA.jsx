@@ -37,13 +37,15 @@ function DistributorCTA() {
 						>
 							<a
 								href="#apply"
-								className="inline-flex h-14 min-w-[200px] items-center justify-center rounded-full bg-[#ffffff] px-8 text-[16px] font-bold text-(--color-brand-red) transition-transform duration-200 hover:-translate-y-1 shadow-[0_8px_20px_rgba(0,0,0,0.15)]"
+								className="inline-flex h-14 min-w-[200px] items-center justify-center rounded-full bg-transparent border-2 border-white/30 px-8 font-body font-semibold text-[#ffffff] transition-all duration-300 hover:-translate-y-1 hover:border-[#ffffff] hover:bg-white/10"
+								style={{ color: '#ffffff' }}
 							>
 								Become Distributor
 							</a>
 							<Link
 								to="/contact"
-								className="inline-flex h-14 min-w-[160px] items-center justify-center rounded-full border-2 border-[#ffffff]/30 bg-transparent px-8 text-[16px] font-bold text-[#ffffff] transition-all duration-300 hover:bg-[#ffffff]/10 hover:border-[#ffffff]/50"
+								className="inline-flex h-14 min-w-[160px] items-center justify-center rounded-full bg-[#ffffff] px-8 font-body font-semibold transition-transform duration-300 hover:-translate-y-1 shadow-[0_8px_20px_rgba(0,0,0,0.15)]"
+								style={{ color: 'var(--color-brand-red)' }}
 							>
 								Contact Us
 							</Link>

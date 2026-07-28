@@ -32,6 +32,7 @@ function ContactCTA() {
 							<button
 								onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
 								className="inline-flex h-14 items-center justify-center rounded-full bg-transparent border-2 border-white/30 px-8 font-body font-semibold text-[#ffffff] transition-all duration-300 hover:-translate-y-1 hover:border-[#ffffff] hover:bg-white/10"
+								style={{ color: '#ffffff' }}
 							>
 								Become a Distributor
 							</button>
