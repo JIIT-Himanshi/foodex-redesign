@@ -77,7 +77,7 @@ function GalleryPage() {
   }
 
   return (
-    <div className="gallery-page-shell flex flex-col min-h-screen pt-[72px]">
+    <div className="gallery-page-shell flex flex-col min-h-screen">
       <GalleryHero />
       <GalleryStats />
 

@@ -15,7 +15,7 @@ function DistributorPage() {
 	}, [])
 
 	return (
-		<div className="flex flex-col min-h-screen pt-[72px]">
+		<div className="flex flex-col min-h-screen">
 			<DistributorHero />
 			<WhyPartner />
 			<NetworkStats />
