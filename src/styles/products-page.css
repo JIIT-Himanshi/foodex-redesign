@@ -592,6 +592,12 @@
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.quickview-modal-panel::-webkit-scrollbar {
+  display: none;
 }
 
 @media (min-width: 768px) {
@@ -712,6 +718,12 @@
   flex-direction: column;
   justify-content: center;
   overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.quickview-info-side::-webkit-scrollbar {
+  display: none;
 }
 
 @media (min-width: 768px) {
