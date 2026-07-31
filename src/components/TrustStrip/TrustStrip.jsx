@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react'
 const trustItems = [
 	{ value: '2008', label: 'Established' },
 	{ value: '50+', label: 'Products' },
-	{ value: '1000+', label: 'Retail Partners' },
+	{ value: '100+', label: 'Retail Partners' },
 	{ value: 'Pan India', label: 'Presence' },
 ]
 

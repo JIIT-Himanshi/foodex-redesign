@@ -3,7 +3,7 @@ import { Box, CircleCheckBig, PackageSearch, TrendingUp } from 'lucide-react'
 
 const highlights = [
 	{ value: '26+', label: 'Years of Experience', icon: TrendingUp },
-	{ value: '100+', label: 'Products', icon: Box },
+	{ value: '50+', label: 'Products', icon: Box },
 	{ value: 'Thousands', label: 'Happy Customers', icon: CircleCheckBig },
 	{ value: 'Quality', label: 'Natural Ingredients', icon: PackageSearch },
 ]
