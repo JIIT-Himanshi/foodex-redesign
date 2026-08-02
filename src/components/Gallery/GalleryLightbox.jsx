@@ -90,7 +90,7 @@ function GalleryLightbox({ items, activeIndex, onClose, onSelectIndex }) {
           <button
             type="button"
             onClick={onClose}
-            className="rounded-full bg-white/10 p-2.5 text-white/80 backdrop-blur-md transition-all duration-200 hover:bg-white/20 hover:text-white"
+            className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white/80 backdrop-blur-md transition-all duration-200 hover:bg-white/20 hover:text-white"
             aria-label="Close Lightbox (ESC)"
           >
             <X className="h-5 w-5" />
@@ -99,14 +99,14 @@ function GalleryLightbox({ items, activeIndex, onClose, onSelectIndex }) {
 
         {/* Center Display Area */}
         <div
-          className="relative flex-1 flex items-center justify-center py-4 px-2 sm:px-8 overflow-hidden"
+          className="relative flex-1 flex items-center justify-center py-4 px-10 sm:px-16 overflow-hidden"
           onClick={(e) => e.stopPropagation()}
         >
           {/* Previous Button */}
           <button
             type="button"
             onClick={handlePrev}
-            className="absolute left-2 sm:left-6 z-20 rounded-full bg-black/50 border border-white/10 p-3.5 text-white/90 backdrop-blur-md transition-all duration-200 hover:bg-red-600 hover:scale-110"
+            className="absolute left-1 sm:left-6 z-20 flex h-11 w-11 items-center justify-center rounded-full bg-black/60 border border-white/10 text-white/90 backdrop-blur-md transition-all duration-200 hover:bg-red-600 hover:scale-110"
             aria-label="Previous image"
           >
             <ChevronLeft className="h-6 w-6" />
@@ -120,12 +120,12 @@ function GalleryLightbox({ items, activeIndex, onClose, onSelectIndex }) {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.95, opacity: 0 }}
               transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-              className="max-h-[72vh] max-w-full flex items-center justify-center"
+              className="max-h-[68vh] sm:max-h-[72vh] max-w-full flex items-center justify-center"
             >
               <img
                 src={currentItem.src}
                 alt={currentItem.title}
-                className="max-h-[72vh] max-w-full rounded-2xl object-contain shadow-2xl border border-white/10"
+                className="max-h-[68vh] sm:max-h-[72vh] max-w-full rounded-2xl object-contain shadow-2xl border border-white/10"
               />
             </motion.div>
           </AnimatePresence>
@@ -134,7 +134,7 @@ function GalleryLightbox({ items, activeIndex, onClose, onSelectIndex }) {
           <button
             type="button"
             onClick={handleNext}
-            className="absolute right-2 sm:right-6 z-20 rounded-full bg-black/50 border border-white/10 p-3.5 text-white/90 backdrop-blur-md transition-all duration-200 hover:bg-red-600 hover:scale-110"
+            className="absolute right-1 sm:right-6 z-20 flex h-11 w-11 items-center justify-center rounded-full bg-black/60 border border-white/10 text-white/90 backdrop-blur-md transition-all duration-200 hover:bg-red-600 hover:scale-110"
             aria-label="Next image"
           >
             <ChevronRight className="h-6 w-6" />

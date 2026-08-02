@@ -13,12 +13,17 @@ function QuickViewModal({ product, onClose }) {
   const [quantity, setQuantity] = useState(1)
   const [showBackImage, setShowBackImage] = useState(false)
 
-  // Reset local state when product changes
+  // Reset local state when product changes & lock body scroll
   useEffect(() => {
     if (product) {
       setSelectedVariant(product.variants[0])
       setQuantity(1)
       setShowBackImage(false)
+      document.body.style.overflow = 'hidden'
+    }
+
+    return () => {
+      document.body.style.overflow = ''
     }
   }, [product])
 

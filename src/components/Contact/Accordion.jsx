@@ -23,7 +23,8 @@ function Accordion({ items }) {
 						}`}
 					>
 						<button
-							className="w-full flex items-center justify-between p-6 text-left focus:outline-none"
+							type="button"
+							className="w-full flex items-center justify-between p-4 sm:p-6 min-h-[52px] text-left focus:outline-none"
 							onClick={() => toggleItem(index)}
 						>
 							<span className={`font-display text-lg font-bold transition-colors duration-300 pr-4 ${isOpen ? 'text-(--color-brand-red)' : 'text-(--color-text-primary)'}`}>

@@ -32,7 +32,7 @@ function Hero() {
 	return (
 		<section className="relative overflow-hidden bg-(--color-bg-primary) lg:min-h-[calc(100vh-72px)]">
 			<div className="mx-auto grid min-h-full max-w-6xl items-center gap-8 px-4 py-12 sm:px-6 md:py-14 lg:grid-cols-[0.52fr_0.46fr] lg:gap-8 lg:px-1 lg:py-0">
-				<div className="relative z-10 flex translate-y-[-10] flex-col items-center text-center lg:items-start lg:pl-0 lg:text-left xl:pl-0">
+				<div className="relative z-10 flex lg:-translate-y-2.5 flex-col items-center text-center lg:items-start lg:pl-0 lg:text-left xl:pl-0">
 					<p
 						data-hero-eyebrow
 						className={`text-[14px] font-semibold uppercase tracking-[0.25em] text-(--color-brand-red) transition-all duration-700 ease-out ${

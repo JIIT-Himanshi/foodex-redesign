@@ -40,6 +40,18 @@ function Navbar() {
 		window.localStorage.setItem('foodex-theme', theme)
 	}, [theme])
 
+	useEffect(() => {
+		if (isMenuOpen) {
+			document.body.style.overflow = 'hidden'
+		} else {
+			document.body.style.overflow = ''
+		}
+
+		return () => {
+			document.body.style.overflow = ''
+		}
+	}, [isMenuOpen])
+
 	const toggleTheme = () => {
 		setTheme((currentTheme) => (currentTheme === 'dark' ? 'light' : 'dark'))
 	}
