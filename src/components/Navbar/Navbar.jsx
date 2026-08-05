@@ -85,9 +85,8 @@ function Navbar() {
 								<Link
 									key={item}
 									to="/products"
-									className={`nav-link text-sm font-medium ${
-										pathname.startsWith('/products') ? 'nav-link-active' : ''
-									}`}
+									className={`nav-link text-sm font-medium ${pathname.startsWith('/products') ? 'nav-link-active' : ''
+										}`}
 								>
 									{item}
 								</Link>
@@ -99,9 +98,8 @@ function Navbar() {
 								<Link
 									key={item}
 									to="/"
-									className={`nav-link text-sm font-medium ${
-										pathname === '/' && !hash ? 'nav-link-active' : ''
-									}`}
+									className={`nav-link text-sm font-medium ${pathname === '/' && !hash ? 'nav-link-active' : ''
+										}`}
 								>
 									{item}
 								</Link>
@@ -220,9 +218,8 @@ function Navbar() {
 								<Link
 									key={item}
 									to="/products"
-									className={`rounded-2xl px-4 py-3 text-sm font-medium transition-colors hover:bg-black/5 hover:text-(--color-brand-red) ${
-										pathname.startsWith('/products') ? 'text-(--color-brand-red) font-semibold' : 'text-(--color-text-primary)'
-									}`}
+									className={`rounded-2xl px-4 py-3 text-sm font-medium transition-colors hover:bg-black/5 hover:text-(--color-brand-red) ${pathname.startsWith('/products') ? 'text-(--color-brand-red) font-semibold' : 'text-(--color-text-primary)'
+										}`}
 									onClick={() => setIsMenuOpen(false)}
 								>
 									{item}
@@ -235,9 +232,8 @@ function Navbar() {
 								<Link
 									key={item}
 									to="/"
-									className={`rounded-2xl px-4 py-3 text-sm font-medium transition-colors hover:bg-black/5 hover:text-(--color-brand-red) ${
-										pathname === '/' && !hash ? 'text-(--color-brand-red) font-semibold' : 'text-(--color-text-primary)'
-									}`}
+									className={`rounded-2xl px-4 py-3 text-sm font-medium transition-colors hover:bg-black/5 hover:text-(--color-brand-red) ${pathname === '/' && !hash ? 'text-(--color-brand-red) font-semibold' : 'text-(--color-text-primary)'
+										}`}
 									onClick={() => setIsMenuOpen(false)}
 								>
 									{item}

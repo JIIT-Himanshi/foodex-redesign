@@ -32,21 +32,19 @@ function Hero() {
 	return (
 		<section className="relative overflow-hidden bg-(--color-bg-primary) lg:min-h-[calc(100vh-72px)]">
 			<div className="mx-auto grid min-h-full max-w-6xl items-center gap-8 px-4 py-12 sm:px-6 md:py-14 lg:grid-cols-[0.52fr_0.46fr] lg:gap-8 lg:px-1 lg:py-0">
-				<div className="relative z-10 flex lg:-translate-y-2.5 flex-col items-center text-center lg:items-start lg:pl-0 lg:text-left xl:pl-0">
+				<div className="relative z-10 flex translate-y-[-10] flex-col items-center text-center lg:items-start lg:pl-0 lg:text-left xl:pl-0">
 					<p
 						data-hero-eyebrow
-						className={`text-[14px] font-semibold uppercase tracking-[0.25em] text-(--color-brand-red) transition-all duration-700 ease-out ${
-							isReady ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-						}`}
+						className={`text-[14px] font-semibold uppercase tracking-[0.25em] text-(--color-brand-red) transition-all duration-700 ease-out ${isReady ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+							}`}
 					>
 						Premium Namkeen & Sweets
 					</p>
 
 					<h1
 						data-hero-heading
-						className={`font-display mt-4 max-w-[12ch] text-4xl font-extrabold leading-[0.96] tracking-[-0.03em] text-(--color-text-primary) transition-all duration-700 ease-out sm:text-5xl md:text-6xl lg:text-[4.25rem] ${
-							isReady ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-						}`}
+						className={`font-display mt-4 max-w-[12ch] text-4xl font-extrabold leading-[0.96] tracking-[-0.03em] text-(--color-text-primary) transition-all duration-700 ease-out sm:text-5xl md:text-6xl lg:text-[4.25rem] ${isReady ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+							}`}
 					>
 						Traditional Taste,
 						<br />
@@ -55,18 +53,16 @@ function Hero() {
 
 					<p
 						data-hero-description
-						className={`font-body mt-5 max-w-130 text-[18px] leading-8 text-(--color-text-secondary) transition-all duration-700 ease-out ${
-							isReady ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-						}`}
+						className={`font-body mt-5 max-w-130 text-[18px] leading-8 text-(--color-text-secondary) transition-all duration-700 ease-out ${isReady ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+							}`}
 					>
 						Crafting authentic namkeen, sweets and festive favourites trusted by families across India since 2008.
 					</p>
 
 					<div
 						data-hero-actions
-						className={`mt-8 flex flex-col items-center gap-5 transition-all duration-700 ease-out sm:flex-row sm:justify-center lg:justify-start ${
-							isReady ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-						}`}
+						className={`mt-8 flex flex-col items-center gap-5 transition-all duration-700 ease-out sm:flex-row sm:justify-center lg:justify-start ${isReady ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+							}`}
 						style={{ transitionDelay: '300ms' }}
 					>
 						<a
@@ -93,9 +89,8 @@ function Hero() {
 					<div
 						ref={productShellRef}
 						data-hero-product
-						className={`relative w-full max-w-64 rotate-[-4deg] transition-all duration-700 ease-out sm:max-w-76 lg:max-w-96 ${
-							isReady ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
-						}`}
+						className={`relative w-full max-w-64 rotate-[-4deg] transition-all duration-700 ease-out sm:max-w-76 lg:max-w-96 ${isReady ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
+							}`}
 						style={{ transitionDelay: '400ms' }}
 					>
 						<div className="group relative translate-x-2 transition-transform duration-500 ease-out hover:-translate-y-0.5 hover:scale-[1.03] lg:translate-x-3">

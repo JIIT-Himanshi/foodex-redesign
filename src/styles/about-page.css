@@ -511,6 +511,7 @@
 }
 
 @media (max-width: 1120px) {
+
 	.about-highlights-grid,
 	.about-story-stats {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -530,6 +531,7 @@
 }
 
 @media (max-width: 900px) {
+
 	.about-hero-section,
 	.about-hero-content-wrap {
 		min-height: 56vh;

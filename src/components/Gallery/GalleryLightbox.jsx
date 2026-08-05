@@ -166,11 +166,10 @@ function GalleryLightbox({ items, activeIndex, onClose, onSelectIndex }) {
                   key={item.id}
                   type="button"
                   onClick={() => onSelectIndex(index)}
-                  className={`relative flex-shrink-0 h-10 w-14 rounded-lg overflow-hidden border transition-all duration-200 ${
-                    isSelected
+                  className={`relative flex-shrink-0 h-10 w-14 rounded-lg overflow-hidden border transition-all duration-200 ${isSelected
                       ? 'border-red-500 ring-2 ring-red-500/50 scale-105 opacity-100'
                       : 'border-white/20 opacity-40 hover:opacity-80'
-                  }`}
+                    }`}
                 >
                   <img src={item.src} alt="" className="h-full w-full object-cover" />
                 </button>
