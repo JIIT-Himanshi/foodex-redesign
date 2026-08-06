@@ -157,7 +157,7 @@ Optimized for:
 
 # Current Development Progress
 
-### ✅ Completed
+### Completed
 
 - Responsive Navigation
 - Home Page
@@ -171,14 +171,14 @@ Optimized for:
 - Responsive Layout System
 - GSAP & Framer Motion Animations
 
-### 🚧 Currently Developing
+### Currently Developing
 
 - Gallery Page
 - Advanced Image Viewer
 - Masonry Layout
 - Interactive Gallery Experience
 
-### 📌 Upcoming Features
+### Upcoming Features
 
 - Global Product Search
 - Shopping Cart
@@ -219,7 +219,7 @@ src/
 
 # Live Demo
 
-🌐 **https://foodex-redesign.vercel.app/**
+**https://foodex-redesign.vercel.app/**
 
 ---
 
@@ -252,13 +252,13 @@ src/
 
 Frontend Developer • React Developer • UI/UX Enthusiast
 
-GitHub: **https://github.com/HimanshiChauhan**
+GitHub: **https://github.com/JIIT-Himanshi**
 
 ---
 
 ## Project Status
 
-**🚧 Active Development — Phase 8 (Gallery Page)**
+** Active Development — Phase 8 (Gallery Page)**
 
 ---
 
