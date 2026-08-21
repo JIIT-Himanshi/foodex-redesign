@@ -1,5 +1,6 @@
 import { ArrowRight } from 'lucide-react'
 import { motion } from 'framer-motion'
+import { useNavigate } from 'react-router-dom'
 import '../../styles/featured-categories.css'
 
 import namkeenImage from '../../assets/categories/namkeen.png'
@@ -8,6 +9,9 @@ import giftPacksImage from '../../assets/categories/gift-packs.png'
 import cookiesImage from '../../assets/categories/cookies.png'
 import readyToEatImage from '../../assets/categories/ready-to-eat.png'
 
+// Category names must exactly match the category values used in products.js and ProductsPage.jsx.
+// 'Gift Packs' has no products in the current dataset; the Products page will gracefully
+// fall back to 'All Products' when an unrecognised category is received.
 const categories = [
 	{ name: 'Namkeen', image: namkeenImage },
 	{ name: 'Sweets', image: sweetsImage },
@@ -29,6 +33,12 @@ function getTabletPlacementClass(index) {
 }
 
 function FeaturedCategories() {
+	const navigate = useNavigate()
+
+	const handleCategoryClick = (categoryName) => {
+		navigate(`/products?category=${encodeURIComponent(categoryName)}`)
+	}
+
 	return (
 		<section
 			aria-label="Featured product categories"
@@ -53,6 +63,16 @@ function FeaturedCategories() {
 							viewport={{ once: true, amount: 0.25 }}
 							transition={{ duration: 0.45, delay: index * 0.1, ease: 'easeOut' }}
 							className={`featured-category-card group h-70 md:col-span-2 md:h-75 lg:col-span-1 lg:h-80 ${getTabletPlacementClass(index)}`}
+							role="button"
+							tabIndex={0}
+							aria-label={`Explore ${category.name}`}
+							onClick={() => handleCategoryClick(category.name)}
+							onKeyDown={(e) => {
+								if (e.key === 'Enter' || e.key === ' ') {
+									e.preventDefault()
+									handleCategoryClick(category.name)
+								}
+							}}
 						>
 							<div className="featured-category-image-zone">
 								<span className="featured-category-base-shadow" aria-hidden="true" />
