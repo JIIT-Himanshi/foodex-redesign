@@ -1,4 +1,5 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
 import gsap from 'gsap'
 
 import heroProduct from '../../assets/products/teekha-mix.png'
@@ -65,20 +66,20 @@ function Hero() {
 							}`}
 						style={{ transitionDelay: '300ms' }}
 					>
-						<a
-							href="#products"
+						<Link
+							to="/products"
 							className="inline-flex h-12 min-w-44 items-center justify-center rounded-full bg-(--color-brand-red) px-1 text-sm font-semibold transition-transform duration-200 hover:-translate-y-0.5 hover:bg-(--color-brand-red)/90"
 							style={{ color: '#ffffff' }}
 						>
 							Explore Products
-						</a>
+						</Link>
 
-						<a
-							href="#about"
+						<Link
+							to="/about"
 							className="inline-flex h-12 min-w-40 items-center justify-center rounded-full border border-[#D8D0C8] bg-[#FBF6EF] px-7 text-sm font-semibold text-[#1A1A1A] shadow-[0_4px_12px_rgba(0,0,0,0.04)] transition-all duration-300 ease-in-out hover:-translate-y-0.5 hover:border-[#cfc6bd] hover:bg-[#F7F2EC]"
 						>
 							About Foodex
-						</a>
+						</Link>
 					</div>
 				</div>
 
