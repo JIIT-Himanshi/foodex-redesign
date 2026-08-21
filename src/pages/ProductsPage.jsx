@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { Search, ChevronDown, SlidersHorizontal, Inbox } from 'lucide-react'
-import { motion, LayoutGroup } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { products } from '../data/products'
 import ProductCard from '../components/ProductCard/ProductCard'
 import QuickViewModal from '../components/QuickViewModal/QuickViewModal'
@@ -183,17 +183,15 @@ function ProductsPage() {
       {/* 4. Products Grid */}
       <section className="products-grid-section" id="products-grid">
         {sortedProducts.length > 0 ? (
-          <LayoutGroup>
-            <motion.div layout className="products-grid">
-              {sortedProducts.map((product) => (
-                <ProductCard
-                  key={product.id}
-                  product={product}
-                  onQuickView={setActiveProduct}
-                />
-              ))}
-            </motion.div>
-          </LayoutGroup>
+          <div className="products-grid">
+            {sortedProducts.map((product) => (
+              <ProductCard
+                key={product.id}
+                product={product}
+                onQuickView={setActiveProduct}
+              />
+            ))}
+          </div>
         ) : (
           /* Empty State */
           <div className="products-empty-state">
