@@ -10,10 +10,10 @@ function GalleryCTA() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="relative overflow-hidden rounded-[32px] border border-black/10 dark:border-white/15 bg-gradient-to-br from-neutral-900 via-black to-neutral-900 p-10 sm:p-16 text-center backdrop-blur-2xl shadow-2xl text-white"
+        className="relative overflow-hidden rounded-[32px] p-10 sm:p-16 text-center shadow-[0_18px_50px_rgba(217,4,41,0.18)] dark:shadow-2xl bg-[var(--color-brand-red)] dark:bg-gradient-to-br dark:from-neutral-900 dark:via-black dark:to-neutral-900 border border-black/5 dark:border-white/15"
       >
         <div className="relative z-10 max-w-3xl mx-auto">
-          <span className="font-mono text-xs font-semibold uppercase tracking-widest text-red-400 mb-4 inline-block">
+          <span className="font-mono text-xs font-semibold uppercase tracking-widest text-white/70 mb-4 inline-block">
             ENTERPRISE PARTNERSHIPS
           </span>
 
@@ -21,14 +21,15 @@ function GalleryCTA() {
             Partner with Foodex India
           </h2>
 
-          <p className="text-base sm:text-xl font-normal text-gray-300 mb-10 max-w-xl mx-auto leading-relaxed">
-            Join one of India’s most resilient and trusted FMCG distribution networks.
+          <p className="text-base sm:text-xl font-normal text-white/85 mb-10 max-w-xl mx-auto leading-relaxed">
+            Join one of India's most resilient and trusted FMCG distribution networks.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link
               to="/distributors"
-              className="inline-flex items-center gap-2 rounded-full bg-red-600 px-8 py-4 text-sm font-semibold text-white shadow-xl shadow-red-600/30 transition-all duration-300 hover:scale-105 hover:bg-red-700"
+              className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold shadow-[0_8px_20px_rgba(0,0,0,0.14)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/95"
+              style={{ color: 'var(--color-brand-red)' }}
             >
               <Building2 className="h-4 w-4" />
               Become a Distributor
@@ -37,7 +38,7 @@ function GalleryCTA() {
 
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-8 py-4 text-sm font-semibold text-white backdrop-blur-md transition-all duration-300 hover:bg-white/20 hover:scale-105"
+              className="inline-flex items-center gap-2 rounded-full border border-white/55 bg-transparent px-8 py-4 text-sm font-semibold text-white transition-all duration-300 hover:bg-white/12 hover:border-white/80 hover:-translate-y-0.5"
             >
               Contact Us
             </Link>
