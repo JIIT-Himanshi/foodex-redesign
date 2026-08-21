@@ -42,8 +42,7 @@ export const galleryItems = [
   {
     id: 1,
     src: directorFounder01,
-    title: 'Founder & Director Keynote',
-    year: '2023',
+    title: 'Leadership Interaction',
     sectionId: 'featured',
     aspect: 'aspect-[16/10]',
     featured: true,
@@ -52,8 +51,7 @@ export const galleryItems = [
   {
     id: 2,
     src: award01,
-    title: 'National FMCG Excellence Honor',
-    year: '2023',
+    title: 'Recognition Moment',
     sectionId: 'featured',
     aspect: 'aspect-[4/3]',
     featured: true,
@@ -62,8 +60,7 @@ export const galleryItems = [
   {
     id: 3,
     src: eventHighlight01,
-    title: 'Annual Corporate Summit',
-    year: '2024',
+    title: 'Business Meet Gathering',
     sectionId: 'featured',
     aspect: 'aspect-[4/3]',
     featured: true,
@@ -74,8 +71,7 @@ export const galleryItems = [
   {
     id: 4,
     src: venue01,
-    title: 'Grand Exhibition Pavilion',
-    year: '2022',
+    title: 'Business Meet Gathering',
     sectionId: 'journey',
     aspect: 'aspect-[21/10]',
     gridSpan: 'col-span-12',
@@ -84,8 +80,7 @@ export const galleryItems = [
   {
     id: 5,
     src: meeting01,
-    title: 'Strategic Executive Review',
-    year: '2023',
+    title: 'Business Discussion',
     sectionId: 'journey',
     aspect: 'aspect-[4/3]',
     gridSpan: 'col-span-12 md:col-span-6 lg:col-span-4',
@@ -94,8 +89,7 @@ export const galleryItems = [
   {
     id: 6,
     src: businessHead01,
-    title: 'Executive Council Address',
-    year: '2023',
+    title: 'Leadership Address',
     sectionId: 'journey',
     aspect: 'aspect-[3/4]',
     gridSpan: 'col-span-12 md:col-span-6 lg:col-span-4',
@@ -104,8 +98,7 @@ export const galleryItems = [
   {
     id: 7,
     src: eventHighlight02,
-    title: 'Milestone Vision Keynote',
-    year: '2024',
+    title: 'Leadership Interaction',
     sectionId: 'journey',
     aspect: 'aspect-[4/3]',
     gridSpan: 'col-span-12 md:col-span-12 lg:col-span-4',
@@ -116,8 +109,7 @@ export const galleryItems = [
   {
     id: 8,
     src: businessPartners01,
-    title: 'Pan-India Distributor Conclave',
-    year: '2022',
+    title: 'Business Partner Meet',
     sectionId: 'business-partners',
     aspect: 'aspect-[16/9]',
     gridSpan: 'col-span-12 lg:col-span-6',
@@ -126,8 +118,7 @@ export const galleryItems = [
   {
     id: 9,
     src: businessPartners02,
-    title: 'Regional Partner Honors',
-    year: '2023',
+    title: 'Partner Engagement',
     sectionId: 'business-partners',
     aspect: 'aspect-[16/9]',
     gridSpan: 'col-span-12 lg:col-span-6',
@@ -138,8 +129,7 @@ export const galleryItems = [
   {
     id: 10,
     src: conference01,
-    title: 'FMCG Innovation Address',
-    year: '2023',
+    title: 'Business Presentation',
     sectionId: 'conference',
     aspect: 'aspect-[16/10]',
     gridSpan: 'col-span-12 md:col-span-6 lg:col-span-4',
@@ -148,8 +138,7 @@ export const galleryItems = [
   {
     id: 11,
     src: conference02,
-    title: 'Global Trade Expo Address',
-    year: '2022',
+    title: 'Corporate Presentation',
     sectionId: 'conference',
     aspect: 'aspect-[16/10]',
     gridSpan: 'col-span-12 md:col-span-6 lg:col-span-4',
@@ -158,8 +147,7 @@ export const galleryItems = [
   {
     id: 12,
     src: conference03,
-    title: 'Quality Assurance Symposium',
-    year: '2024',
+    title: 'Speaker Session',
     sectionId: 'conference',
     aspect: 'aspect-[16/10]',
     gridSpan: 'col-span-12 md:col-span-12 lg:col-span-4',
@@ -170,8 +158,7 @@ export const galleryItems = [
   {
     id: 13,
     src: director01,
-    title: 'Managing Director Address',
-    year: '2023',
+    title: 'Leadership Address',
     sectionId: 'leadership',
     aspect: 'aspect-[4/3]',
     gridSpan: 'col-span-12 md:col-span-6',
@@ -180,8 +167,7 @@ export const galleryItems = [
   {
     id: 14,
     src: director02,
-    title: 'Strategic Vision Directive',
-    year: '2024',
+    title: 'Leadership Session',
     sectionId: 'leadership',
     aspect: 'aspect-[4/3]',
     gridSpan: 'col-span-12 md:col-span-6',
@@ -192,8 +178,7 @@ export const galleryItems = [
   {
     id: 15,
     src: award02,
-    title: 'Manufacturing Hygiene Certification',
-    year: '2023',
+    title: 'Recognition Moment',
     sectionId: 'awards',
     aspect: 'aspect-[16/9]',
     gridSpan: 'col-span-12 md:col-span-6',
@@ -202,8 +187,7 @@ export const galleryItems = [
   {
     id: 16,
     src: venue02,
-    title: 'Brand Legacy Recognition',
-    year: '2022',
+    title: 'Appreciation Moment',
     sectionId: 'awards',
     aspect: 'aspect-[16/9]',
     gridSpan: 'col-span-12 md:col-span-6',
@@ -214,8 +198,7 @@ export const galleryItems = [
   {
     id: 17,
     src: audience01,
-    title: 'Distributor Engagement Session',
-    year: '2023',
+    title: 'Audience Interaction',
     sectionId: 'audience',
     aspect: 'aspect-[4/3]',
     gridSpan: 'col-span-12 md:col-span-6 lg:col-span-4',
@@ -224,8 +207,7 @@ export const galleryItems = [
   {
     id: 18,
     src: audience02,
-    title: 'Market Insights Q&A',
-    year: '2023',
+    title: 'Interactive Business Session',
     sectionId: 'audience',
     aspect: 'aspect-[4/3]',
     gridSpan: 'col-span-12 md:col-span-6 lg:col-span-4',
@@ -234,8 +216,7 @@ export const galleryItems = [
   {
     id: 19,
     src: audience03,
-    title: 'Trade Leaders Round Table',
-    year: '2024',
+    title: 'Business Discussion',
     sectionId: 'audience',
     aspect: 'aspect-[4/3]',
     gridSpan: 'col-span-12 md:col-span-6 lg:col-span-4',
@@ -244,8 +225,7 @@ export const galleryItems = [
   {
     id: 20,
     src: audience04,
-    title: 'Expo Networking Foyer',
-    year: '2022',
+    title: 'Business Meet Gathering',
     sectionId: 'audience',
     aspect: 'aspect-[4/3]',
     gridSpan: 'col-span-12 md:col-span-6 lg:col-span-4',
@@ -254,8 +234,7 @@ export const galleryItems = [
   {
     id: 21,
     src: audience05,
-    title: 'Zonal Strategy Meet',
-    year: '2023',
+    title: 'Business Meet Discussion',
     sectionId: 'audience',
     aspect: 'aspect-[4/3]',
     gridSpan: 'col-span-12 md:col-span-6 lg:col-span-4',
@@ -264,8 +243,7 @@ export const galleryItems = [
   {
     id: 22,
     src: audience06,
-    title: 'National Delegate Conclave',
-    year: '2024',
+    title: 'Networking Session',
     sectionId: 'audience',
     aspect: 'aspect-[4/3]',
     gridSpan: 'col-span-12 md:col-span-6 lg:col-span-4',

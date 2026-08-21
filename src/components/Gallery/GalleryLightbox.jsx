@@ -150,11 +150,6 @@ function GalleryLightbox({ items, activeIndex, onClose, onSelectIndex }) {
             <h2 className="font-display text-xl sm:text-2xl font-bold text-white leading-snug">
               {currentItem.title}
             </h2>
-            {currentItem.year && (
-              <span className="text-xs font-mono text-amber-400 mt-1 inline-block">
-                [{currentItem.year}]
-              </span>
-            )}
           </div>
 
           {/* Thumbnail Strip */}

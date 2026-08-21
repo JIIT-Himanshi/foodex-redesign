@@ -106,17 +106,12 @@ function GalleryCard({ item, onCardClick, floating = false }) {
           </div>
         </div>
 
-        {/* Minimal Bottom Caption: Image + Small Title + Year */}
+        {/* Minimal Bottom Caption */}
         <div className="absolute bottom-0 inset-x-0 z-10 p-5 sm:p-6 transition-transform duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] transform translate-y-1 group-hover:translate-y-0">
           <div className="flex items-center justify-between gap-3">
             <h3 className="font-display text-base sm:text-lg font-bold text-white leading-snug tracking-tight drop-shadow-md">
               {item.title}
             </h3>
-            {item.year && (
-              <span className="text-xs font-semibold uppercase tracking-wider text-amber-400 bg-black/40 px-2.5 py-1 rounded-full border border-amber-400/20 backdrop-blur-md">
-                {item.year}
-              </span>
-            )}
           </div>
         </div>
       </div>

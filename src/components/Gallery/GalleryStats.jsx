@@ -17,8 +17,6 @@ function GalleryStats() {
           <span>22 Selected Photographs</span>
           <span className="opacity-40">•</span>
           <span>7 Editorial Chapters</span>
-          <span className="opacity-40">•</span>
-          <span className="text-(--color-brand-red) font-semibold">1998 — 2024</span>
         </div>
       </motion.div>
     </section>

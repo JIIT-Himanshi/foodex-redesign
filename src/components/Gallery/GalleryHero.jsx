@@ -60,7 +60,7 @@ function GalleryHero() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="mx-auto max-w-xl text-lg font-normal text-gray-200 sm:text-2xl mb-10 text-balance leading-relaxed"
         >
-          Twenty-five years of leadership, partnership, and corporate excellence captured in moments.
+          Leadership, partnership, and corporate excellence captured in moments.
         </motion.p>
 
         {/* Minimal Action & Scroll Prompt */}
