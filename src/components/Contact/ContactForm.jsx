@@ -34,7 +34,7 @@ function ContactForm() {
 							</div>
 						</div>
 
-						<div className="flex flex-col gap-6 pl-2">
+						<div id="complete-contacts" className="flex flex-col gap-6 pl-2" style={{ scrollMarginTop: '88px' }}>
 							<div>
 								<h4 className="font-display text-lg font-bold text-(--color-text-primary) mb-2">Corporate Office</h4>
 								<p className="font-body text-(--color-text-secondary) leading-relaxed">

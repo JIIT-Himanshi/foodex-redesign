@@ -158,3 +158,41 @@ select {
 	border-top: 1px solid var(--color-border);
 	box-shadow: var(--color-shadow);
 }
+
+/* Contact page — "View complete contacts below" link inside Phone Numbers card */
+.contact-view-all-link {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	margin-top: 10px;
+	font-family: 'Inter', sans-serif;
+	font-size: 13px;
+	font-weight: 600;
+	color: var(--color-brand-red);
+	cursor: pointer;
+	text-decoration: underline;
+	text-decoration-color: transparent;
+	text-underline-offset: 3px;
+	transition:
+		text-decoration-color 220ms ease,
+		color 220ms ease;
+}
+
+.contact-view-all-link:hover {
+	text-decoration-color: var(--color-brand-red);
+}
+
+.contact-view-all-link:hover .contact-view-all-icon {
+	transform: translateY(2px);
+}
+
+.contact-view-all-icon {
+	transition: transform 220ms ease;
+	flex-shrink: 0;
+}
+
+.contact-view-all-link:focus-visible {
+	outline: 2px solid var(--color-brand-red);
+	outline-offset: 3px;
+	border-radius: 3px;
+}

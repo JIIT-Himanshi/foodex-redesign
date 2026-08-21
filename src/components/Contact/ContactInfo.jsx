@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Clock } from 'lucide-react'
+import { MapPin, Phone, Mail, Clock, ChevronDown } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 const contactDetails = [
@@ -10,7 +10,7 @@ const contactDetails = [
 	{
 		icon: Phone,
 		title: 'Phone Numbers',
-		description: 'Sales & Business Enquiries\n+91 98962 56933\nView complete contacts below',
+		description: 'Sales & Business Enquiries\n+91 98962 56933',
 	},
 	{
 		icon: Mail,
@@ -49,6 +49,16 @@ function ContactInfo() {
 								<p className="font-body text-(--color-text-secondary) leading-relaxed whitespace-pre-line text-[15px]">
 									{detail.description}
 								</p>
+								{detail.title === 'Phone Numbers' && (
+									<a
+										href="#complete-contacts"
+										className="contact-view-all-link"
+										aria-label="View complete contact details below"
+									>
+										View complete contacts below
+										<ChevronDown size={14} className="contact-view-all-icon" aria-hidden="true" />
+									</a>
+								)}
 							</motion.div>
 						)
 					})}

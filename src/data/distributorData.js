@@ -35,8 +35,8 @@ export const whyPartnerCards = [
 
 export const networkStats = [
 	{ number: 26, label: 'Years of Excellence', suffix: '+' },
-	{ number: 100, label: 'Products', suffix: '+' },
-	{ number: 500, label: 'Retail Partners', suffix: '+' },
+	{ number: 50, label: 'Products', suffix: '+' },
+	{ number: 100, label: 'Retail Partners', suffix: '+' },
 	{ number: 120, label: 'Cities Served', suffix: '+' },
 ]
 
