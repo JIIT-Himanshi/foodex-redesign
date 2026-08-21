@@ -21,7 +21,7 @@ function ContactForm() {
 									The grayscale filter gives it a premium look, which becomes colorful on hover.
 								*/}
 								<iframe
-									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.56!2d77.2090!3d28.6139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM2JzUwLjAiTiA3N8KwMTInMzIuNCJF!5e0!3m2!1sen!2sin!4v1625123456789!5m2!1sen!2sin"
+									src="https://maps.google.com/maps?q=95+DLF+Industrial+Area+Phase+1+Faridabad+Haryana+121003+India&output=embed"
 									width="100%"
 									height="100%"
 									style={{ border: 0 }}
@@ -29,7 +29,7 @@ function ContactForm() {
 									loading="lazy"
 									referrerPolicy="no-referrer-when-downgrade"
 									className="absolute inset-0 w-full h-full object-cover filter grayscale opacity-80 transition-all duration-500 group-hover:grayscale-0 group-hover:opacity-100"
-									title="Foodex Office Location"
+									title="Foodex Office Location — 95, DLF Industrial Area, Phase-1, Faridabad"
 								></iframe>
 							</div>
 						</div>
