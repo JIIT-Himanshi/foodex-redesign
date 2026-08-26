@@ -13,14 +13,15 @@ function ProductsPage() {
   const [searchParams, setSearchParams] = useSearchParams()
   const initialCategory = searchParams.get('category') || 'All Products'
 
-  const [searchQuery, setSearchQuery] = useState('')
+  const initialSearch = searchParams.get('search') || ''
+  const [searchQuery, setSearchQuery] = useState(initialSearch)
   const [selectedCategory, setSelectedCategory] = useState(initialCategory)
   const [sortBy, setSortBy] = useState('Featured')
   const [activeProduct, setActiveProduct] = useState(null)
 
   const catalogRef = useRef(null)
 
-  // Sync category state if URL parameter changes
+  // Sync category and search state if URL parameters change
   useEffect(() => {
     const cat = searchParams.get('category')
     if (cat) {
@@ -31,6 +32,12 @@ function ProductsPage() {
       }
     } else {
       setSelectedCategory('All Products')
+    }
+
+    // Sync search query from URL (used by global search overlay "View all results")
+    const urlSearch = searchParams.get('search')
+    if (urlSearch !== null) {
+      setSearchQuery(decodeURIComponent(urlSearch))
     }
   }, [searchParams])
 

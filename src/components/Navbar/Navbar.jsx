@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, Moon, Search, ShoppingCart, Sun, UserRound, X } from 'lucide-react'
+import SearchOverlay from '../SearchOverlay/SearchOverlay'
 
 const navItems = [
 	'Home',
@@ -13,6 +14,7 @@ const navItems = [
 
 function Navbar() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
+	const [isSearchOpen, setIsSearchOpen] = useState(false)
 	const [isScrolled, setIsScrolled] = useState(false)
 	const { pathname, hash } = useLocation()
 	const [theme, setTheme] = useState(() => {
@@ -156,7 +158,8 @@ function Navbar() {
 					<button
 						type="button"
 						className="icon-button inline-flex h-10 w-10 rounded-full sm:h-11 sm:w-11"
-						aria-label="Search"
+						aria-label="Search products"
+						onClick={() => setIsSearchOpen(true)}
 					>
 						<Search className="h-4 w-4" />
 					</button>
@@ -299,6 +302,8 @@ function Navbar() {
 					</button>
 				</div>
 			</div>
+
+			<SearchOverlay isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
 		</header>
 	)
 }
