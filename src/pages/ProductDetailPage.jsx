@@ -1,18 +1,20 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useParams, Link, useNavigate } from 'react-router-dom'
 import { 
   ChevronRight, Plus, Minus, ShoppingCart, 
   Truck, ShieldCheck, Leaf, PackageCheck, 
-  Star, Heart
+  Star, Heart, Check
 } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { products } from '../data/products'
 import ProductCard from '../components/ProductCard/ProductCard'
 import QuickViewModal from '../components/QuickViewModal/QuickViewModal'
+import { useCart } from '../context/CartContext'
 
 function ProductDetailPage() {
   const { slug } = useParams()
   const navigate = useNavigate()
+  const { addToCart } = useCart()
 
   // Find current product in dataset
   const product = products.find((p) => p.id === slug)
@@ -21,6 +23,8 @@ function ProductDetailPage() {
   const [quantity, setQuantity] = useState(1)
   const [activeImage, setActiveImage] = useState(null)
   const [activeQuickViewProduct, setActiveQuickViewProduct] = useState(null)
+  const [addedFeedback, setAddedFeedback] = useState(false)
+  const feedbackTimer = useRef(null)
 
   // Initialize and reset states when slug changes
   useEffect(() => {
@@ -65,7 +69,14 @@ function ProductDetailPage() {
   }
 
   const handleAddToCart = () => {
-    alert(`Added ${quantity} x ${name} (${selectedVariant.name}) to cart!`)
+    addToCart(product, selectedVariant, quantity)
+
+    // Show brief "Added ✓" feedback
+    setAddedFeedback(true)
+    if (feedbackTimer.current) clearTimeout(feedbackTimer.current)
+    feedbackTimer.current = setTimeout(() => {
+      setAddedFeedback(false)
+    }, 1500)
   }
 
   const handleBuyNow = () => {
@@ -219,11 +230,11 @@ function ProductDetailPage() {
             <div className="detail-action-buttons-vertical">
               <button
                 type="button"
-                className="btn-add-to-cart font-display"
+                className={`btn-add-to-cart font-display ${addedFeedback ? 'add-feedback-success' : ''}`}
                 onClick={handleAddToCart}
                 disabled={isOutOfStock}
               >
-                {isOutOfStock ? 'Sold Out' : 'Add To Cart'}
+                {isOutOfStock ? 'Sold Out' : addedFeedback ? '✓ Added to Cart' : 'Add To Cart'}
               </button>
               <button
                 type="button"

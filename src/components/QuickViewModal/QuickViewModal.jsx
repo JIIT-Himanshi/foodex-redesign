@@ -1,17 +1,21 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { X, Plus, Minus, ShoppingCart, Info } from 'lucide-react'
+import { X, Plus, Minus, ShoppingCart, Check } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useCart } from '../../context/CartContext'
 
 function QuickViewModal({ product, onClose }) {
   if (!product) return null
 
   const { id, name, category, description, variants, stockCount, frontImage, backImage } = product
   const navigate = useNavigate()
+  const { addToCart } = useCart()
 
   const [selectedVariant, setSelectedVariant] = useState(variants[0])
   const [quantity, setQuantity] = useState(1)
   const [showBackImage, setShowBackImage] = useState(false)
+  const [addedFeedback, setAddedFeedback] = useState(false)
+  const feedbackTimer = useRef(null)
 
   // Reset local state when product changes & lock body scroll
   useEffect(() => {
@@ -19,11 +23,13 @@ function QuickViewModal({ product, onClose }) {
       setSelectedVariant(product.variants[0])
       setQuantity(1)
       setShowBackImage(false)
+      setAddedFeedback(false)
       document.body.style.overflow = 'hidden'
     }
 
     return () => {
       document.body.style.overflow = ''
+      if (feedbackTimer.current) clearTimeout(feedbackTimer.current)
     }
   }, [product])
 
@@ -46,8 +52,14 @@ function QuickViewModal({ product, onClose }) {
   }
 
   const handleAddToCart = () => {
-    alert(`Added ${quantity} x ${name} (${selectedVariant.name}) to cart!`)
-    onClose()
+    addToCart(product, selectedVariant, quantity)
+
+    // Show brief "Added ✓" feedback without closing modal
+    setAddedFeedback(true)
+    if (feedbackTimer.current) clearTimeout(feedbackTimer.current)
+    feedbackTimer.current = setTimeout(() => {
+      setAddedFeedback(false)
+    }, 1500)
   }
 
   return (
@@ -135,6 +147,7 @@ function QuickViewModal({ product, onClose }) {
                     onClick={() => {
                       setSelectedVariant(v)
                       setQuantity(1) // Reset quantity to 1 when variant changes
+                      setAddedFeedback(false)
                     }}
                   >
                     {v.name}
@@ -175,11 +188,11 @@ function QuickViewModal({ product, onClose }) {
             <div className="quickview-actions">
               <button
                 type="button"
-                className="quickview-add-btn font-display"
+                className={`quickview-add-btn font-display ${addedFeedback ? 'add-feedback-success' : ''}`}
                 onClick={handleAddToCart}
                 disabled={isOutOfStock}
               >
-                {isOutOfStock ? 'Out of Stock' : 'Add to Cart'}
+                {isOutOfStock ? 'Out of Stock' : addedFeedback ? '✓ Added to Cart' : 'Add to Cart'}
               </button>
               <button
                 type="button"
@@ -200,3 +213,4 @@ function QuickViewModal({ product, onClose }) {
 }
 
 export default QuickViewModal
+

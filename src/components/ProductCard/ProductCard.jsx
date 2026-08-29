@@ -1,15 +1,36 @@
-import { Eye, ShoppingCart } from 'lucide-react'
+import { useState, useRef } from 'react'
+import { Eye, ShoppingCart, Check } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import { useCart } from '../../context/CartContext'
 
 function ProductCard({ product, onQuickView }) {
   const { id, name, category, variants, stockCount, frontImage } = product
+  const { addToCart } = useCart()
+
+  const [addedFeedback, setAddedFeedback] = useState(false)
+  const feedbackTimer = useRef(null)
 
   const prices = variants.map((v) => v.price)
   const minPrice = Math.min(...prices)
   const maxPrice = Math.max(...prices)
 
   const isOutOfStock = stockCount === 0
+
+  const handleAdd = (e) => {
+    e.stopPropagation()
+    if (isOutOfStock) return
+
+    // Add the first (default) variant with quantity 1
+    addToCart(product, variants[0], 1)
+
+    // Show brief "Added ✓" feedback
+    setAddedFeedback(true)
+    if (feedbackTimer.current) clearTimeout(feedbackTimer.current)
+    feedbackTimer.current = setTimeout(() => {
+      setAddedFeedback(false)
+    }, 1500)
+  }
 
   const renderPrice = () => {
     if (minPrice === maxPrice) {
@@ -78,16 +99,22 @@ function ProductCard({ product, onQuickView }) {
           {renderPrice()}
           <button
             type="button"
-            className={`product-card-add-btn ${isOutOfStock ? 'disabled' : ''}`}
+            className={`product-card-add-btn ${isOutOfStock ? 'disabled' : ''} ${addedFeedback ? 'add-feedback-success' : ''}`}
             disabled={isOutOfStock}
             aria-label={isOutOfStock ? `${name} is out of stock` : `Add ${name} to cart`}
-            onClick={(e) => {
-              e.stopPropagation()
-              alert(`Added ${name} (${variants[0].name}) to cart!`)
-            }}
+            onClick={handleAdd}
           >
-            {!isOutOfStock && <ShoppingCart size={16} />}
-            <span>{isOutOfStock ? 'Sold Out' : '+ Add'}</span>
+            {addedFeedback ? (
+              <>
+                <Check size={16} />
+                <span>Added</span>
+              </>
+            ) : (
+              <>
+                {!isOutOfStock && <ShoppingCart size={16} />}
+                <span>{isOutOfStock ? 'Sold Out' : '+ Add'}</span>
+              </>
+            )}
           </button>
         </div>
       </div>
@@ -96,3 +123,4 @@ function ProductCard({ product, onQuickView }) {
 }
 
 export default ProductCard
+

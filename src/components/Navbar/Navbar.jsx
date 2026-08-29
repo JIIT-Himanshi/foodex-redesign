@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, Moon, Search, ShoppingCart, Sun, UserRound, X } from 'lucide-react'
+import { motion, AnimatePresence } from 'framer-motion'
 import SearchOverlay from '../SearchOverlay/SearchOverlay'
+import { useCart } from '../../context/CartContext'
 
 const navItems = [
 	'Home',
@@ -23,6 +25,8 @@ function Navbar() {
 
 		return storedTheme ?? (prefersDark ? 'dark' : 'light')
 	})
+
+	const { cartItemCount, openCart, closeCart, isCartOpen } = useCart()
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -56,6 +60,17 @@ function Navbar() {
 
 	const toggleTheme = () => {
 		setTheme((currentTheme) => (currentTheme === 'dark' ? 'light' : 'dark'))
+	}
+
+	// Search/Cart mutual exclusivity
+	const handleOpenSearch = () => {
+		if (isCartOpen) closeCart()
+		setIsSearchOpen(true)
+	}
+
+	const handleOpenCart = () => {
+		if (isSearchOpen) setIsSearchOpen(false)
+		openCart()
 	}
 
 	return (
@@ -159,7 +174,7 @@ function Navbar() {
 						type="button"
 						className="icon-button inline-flex h-10 w-10 rounded-full sm:h-11 sm:w-11"
 						aria-label="Search products"
-						onClick={() => setIsSearchOpen(true)}
+						onClick={handleOpenSearch}
 					>
 						<Search className="h-4 w-4" />
 					</button>
@@ -175,9 +190,26 @@ function Navbar() {
 					<button
 						type="button"
 						className="icon-button hidden h-10 w-10 rounded-full sm:inline-flex sm:h-11 sm:w-11"
-						aria-label="Cart"
+						aria-label="Open shopping cart"
+						onClick={handleOpenCart}
 					>
-						<ShoppingCart className="h-4 w-4" />
+						<span className="cart-badge-wrapper">
+							<ShoppingCart className="h-4 w-4" />
+							<AnimatePresence>
+								{cartItemCount > 0 && (
+									<motion.span
+										className="cart-badge"
+										initial={{ scale: 0 }}
+										animate={{ scale: 1 }}
+										exit={{ scale: 0 }}
+										transition={{ type: 'spring', stiffness: 500, damping: 25 }}
+										key="cart-badge"
+									>
+										{cartItemCount > 99 ? '99+' : cartItemCount}
+									</motion.span>
+								)}
+							</AnimatePresence>
+						</span>
 					</button>
 
 					<button
@@ -293,6 +325,25 @@ function Navbar() {
 							)
 						)
 					})}
+
+					{/* Cart link in mobile menu */}
+					<button
+						type="button"
+						className="rounded-2xl px-4 py-3 text-sm font-medium text-(--color-text-primary) transition-colors hover:bg-black/5 hover:text-(--color-brand-red) inline-flex items-center gap-2"
+						onClick={() => {
+							setIsMenuOpen(false)
+							handleOpenCart()
+						}}
+					>
+						<ShoppingCart className="h-4 w-4" />
+						Cart
+						{cartItemCount > 0 && (
+							<span className="inline-flex items-center justify-center min-w-[20px] h-[20px] px-1 rounded-full bg-(--color-brand-red) text-white text-[11px] font-bold leading-none">
+								{cartItemCount > 99 ? '99+' : cartItemCount}
+							</span>
+						)}
+					</button>
+
 					<button
 						type="button"
 						className="mt-2 self-center rounded-full bg-(--color-brand-red) px-5 py-1.5 text-sm font-medium text-white shadow-sm transition-all duration-200 hover:bg-(--color-brand-red)/90 hover:shadow-md"
@@ -309,3 +360,4 @@ function Navbar() {
 }
 
 export default Navbar
+

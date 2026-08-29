@@ -2,6 +2,7 @@ import { Routes, Route, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
 import Navbar from './components/Navbar/Navbar'
 import FooterSection from './components/FooterSection/FooterSection'
+import CartDrawer from './components/Cart/CartDrawer'
 import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
 import ProductsPage from './pages/ProductsPage'
@@ -21,6 +22,7 @@ function App() {
   return (
     <>
       <Navbar />
+      <CartDrawer />
       <main className="overflow-x-clip">
         <Routes>
           <Route path="/" element={<HomePage />} />
