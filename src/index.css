@@ -159,6 +159,13 @@ select {
 	box-shadow: var(--color-shadow);
 }
 
+/* ── Navbar Order Online CTA link — force white text ── */
+/* Overrides the global `a { color: inherit }` reset */
+nav a[href="/order-online"],
+.mobile-menu-panel a[href="/order-online"] {
+	color: #ffffff !important;
+}
+
 /* Contact page — "View complete contacts below" link inside Phone Numbers card */
 .contact-view-all-link {
 	display: inline-flex;

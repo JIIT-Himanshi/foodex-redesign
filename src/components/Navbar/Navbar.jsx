@@ -222,12 +222,12 @@ function Navbar() {
 						{theme === 'dark' ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
 					</button>
 
-					<button
-						type="button"
+					<Link
+						to="/order-online"
 						className="hidden items-center rounded-full bg-(--color-brand-red) px-3 py-1.5 text-[14px] font-medium text-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-(--color-brand-red)/90 hover:shadow-md lg:inline-flex"
 					>
 						Order Online
-					</button>
+					</Link>
 
 					<button
 						type="button"
@@ -344,13 +344,13 @@ function Navbar() {
 						)}
 					</button>
 
-					<button
-						type="button"
+					<Link
+						to="/order-online"
 						className="mt-2 self-center rounded-full bg-(--color-brand-red) px-5 py-1.5 text-sm font-medium text-white shadow-sm transition-all duration-200 hover:bg-(--color-brand-red)/90 hover:shadow-md"
 						onClick={() => setIsMenuOpen(false)}
 					>
 						Order Online
-					</button>
+					</Link>
 				</div>
 			</div>
 
