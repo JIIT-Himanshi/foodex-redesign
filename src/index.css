@@ -82,16 +82,29 @@ select {
 	font-family: 'Inter', sans-serif;
 }
 
+.navbar-header {
+	background-color: var(--color-bg-primary);
+	border-bottom: 1px solid transparent;
+	transition:
+		background-color 220ms ease,
+		border-color 220ms ease,
+		box-shadow 220ms ease;
+}
+
+.navbar-header.navbar-scrolled {
+	background-color: var(--color-bg-primary);
+	border-bottom: 1px solid var(--color-border);
+	box-shadow: var(--color-shadow);
+}
+
 .glass-surface {
-	background: var(--color-glass);
-	backdrop-filter: blur(18px);
-	-webkit-backdrop-filter: blur(18px);
+	background-color: var(--color-bg-primary);
 	border-bottom: 1px solid var(--color-border);
 	box-shadow: var(--color-shadow);
 }
 
 .glass-surface-strong {
-	background: var(--color-glass-strong);
+	background-color: var(--color-bg-primary);
 }
 
 .nav-link {
@@ -154,7 +167,7 @@ select {
 }
 
 .mobile-menu-panel {
-	background: var(--color-glass-strong);
+	background-color: var(--color-bg-primary);
 	border-top: 1px solid var(--color-border);
 	box-shadow: var(--color-shadow);
 }

@@ -75,8 +75,9 @@ function Navbar() {
 
 	return (
 		<header
-			className={`sticky top-0 z-50 transition-all duration-200 ${isScrolled ? 'glass-surface' : 'bg-transparent'
-				}`}
+			className={`sticky top-0 z-50 transition-all duration-200 navbar-header ${
+				isScrolled ? 'navbar-scrolled' : ''
+			}`}
 		>
 			<nav className="mx-auto grid w-full max-w-7xl grid-cols-[auto_1fr_auto] items-center gap-3 px-4 py-3 sm:px-6 lg:px-8 lg:py-3">
 				<Link
